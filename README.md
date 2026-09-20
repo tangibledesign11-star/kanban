@@ -46,18 +46,75 @@ See our [roadmap](https://kan.bn/kan/roadmap) for upcoming features.
 - [Tailwind CSS](https://tailwindcss.com/?ref=kan.bn)
 - [Drizzle ORM](https://orm.drizzle.team/?ref=kan.bn)
 - [React Email](https://react.email/?ref=kan.bn)
+- [PGlite](https://pglite.dev/) (embedded local PostgreSQL)
 
 ## Self Hosting 🐳
 
-### One-click Deployments
+This fork offers multiple deployment options: a **zero-infrastructure local setup** (recommended for local use and development without external dependencies), standard **Docker Compose** with PostgreSQL, or **one-click cloud deployments**.
 
-The easiest way to deploy Kan is through Railway. We've partnered with Railway to maintain an official template that supports the development of the project.
+### Simple Local Setup (No Docker Required) ⚡
 
-<a href="https://railway.com/deploy/kan?referralCode=bZPsr2&utm_medium=integration&utm_source=template&utm_campaign=generic">
-  <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="40" />
-</a>
+Run Kan locally without Docker or an external PostgreSQL server using an embedded PostgreSQL database powered by [PGlite](https://pglite.dev/).
 
-### Docker Compose
+#### What You Need
+- **Node.js**: v20 or later
+- **pnpm**: v9 or later
+
+#### What You Do NOT Need
+- ❌ No Docker or container runtime
+- ❌ No external PostgreSQL server
+- ❌ No SMTP / email service (email and password sign-up and login work locally out-of-the-box without email verification)
+- ❌ No OAuth providers (Google, GitHub, Discord)
+- ❌ No Redis or S3 object storage
+
+#### Quick Start
+
+The intended simple experience is:
+**Install** → **Start** → **Sign up with email/password** → **Create workspace** → **Use Kan**
+
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:tangibledesign11-star/kanban.git
+   cd kanban
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
+
+3. **Configure environment:**
+   Create a `.env` file in the project root with the minimal configuration:
+   ```bash
+   NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+   BETTER_AUTH_SECRET="your-random-32-plus-character-secret-key"
+   NEXT_PUBLIC_ALLOW_CREDENTIALS="true"
+   # Leave POSTGRES_URL unset or empty for embedded PGlite
+   ```
+
+4. **Start the application:**
+   ```bash
+   pnpm dev
+   ```
+   *Database migrations are applied automatically to the embedded database on startup.*
+
+5. **Start using Kan:**
+   - Open [http://localhost:3000](http://localhost:3000) in your browser.
+   - Click **Sign Up**, enter your name, email, and password.
+   - Create your first workspace and start managing boards immediately.
+
+#### Data Storage & Persistence (`./pgdata`)
+- When running in embedded mode, database data is stored locally in the `./pgdata` directory.
+- Workspaces, boards, cards, and user accounts **persist across application restarts**.
+- **Important**: `./pgdata` contains local application data and is included in `.gitignore`. It should never be committed to Git.
+- To reset the local database and start fresh, stop the development server and delete `./pgdata`:
+  ```bash
+  rm -rf pgdata apps/web/pgdata
+  ```
+
+---
+
+### Docker Compose (Optional PostgreSQL Deployment)
 
 Alternatively, you can self-host Kan with Docker Compose. This will set up everything for you including your postgres database and automatically run migrations.
 
@@ -143,28 +200,41 @@ The `migrate` service will automatically run database migrations before the web 
 
 For the complete Docker Compose configuration with all optional features, see [docker-compose.yml](./docker-compose.yml) in the repository.
 
+---
+
+### One-click Deployments
+
+You can also deploy Kan through Railway using the official template:
+
+<a href="https://railway.com/deploy/kan?referralCode=bZPsr2&utm_medium=integration&utm_source=template&utm_campaign=generic">
+  <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="40" />
+</a>
+
 ## Local Development 🧑‍💻
 
-1. Clone the repository (or fork)
+1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/kanbn/kan.git
+git clone git@github.com:tangibledesign11-star/kanban.git
+cd kanban
 ```
 
-2. Install dependencies
+2. **Install dependencies:**
 
 ```bash
 pnpm install
 ```
 
-3. Copy `.env.example` to `.env` and configure your environment variables
-4. Migrate database
+3. **Configure environment:**
+   Copy `.env.example` to `.env`.
+   - **Embedded PGlite Mode (Default)**: Leave `POSTGRES_URL` unset or empty. The embedded database initializes and migrates automatically on first run, persisting data locally in `./pgdata`.
+   - **External PostgreSQL**: If you prefer an external database server, set `POSTGRES_URL` in `.env` and run migrations manually:
 
 ```bash
 pnpm db:migrate
 ```
 
-5. Start the development server
+4. **Start the development server:**
 
 ```bash
 pnpm dev
@@ -174,7 +244,7 @@ pnpm dev
 
 | Variable                                  | Description                                               | Required                                    | Example                                                     |
 | ----------------------------------------- | --------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
-| `POSTGRES_URL`                            | PostgreSQL connection URL                                 | To use external database                    | `postgres://user:pass@localhost:5432/db`                    |
+| `POSTGRES_URL`                            | PostgreSQL connection URL (leave unset or empty for embedded PGlite) | To use external database                 | `postgres://user:pass@localhost:5432/db`                    |
 | `REDIS_URL`                               | Redis connection URL                                      | For rate limiting (optional)                | `redis://localhost:6379` or `redis://redis:6379` (Docker)   |
 | `EMAIL_FROM`                              | Sender email address                                      | For Email                                   | `"Kan <hello@mail.kan.bn>"`                                 |
 | `SMTP_HOST`                               | SMTP server hostname                                      | For Email                                   | `smtp.resend.com`                                           |
