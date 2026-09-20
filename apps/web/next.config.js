@@ -66,7 +66,7 @@ const config = {
       },
     },
   },
-  serverExternalPackages: ["pino"],
+  serverExternalPackages: ["pino", "pino-pretty", "@electric-sql/pglite"],
 
   experimental: {
     // instrumentationHook: true,

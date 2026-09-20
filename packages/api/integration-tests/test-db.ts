@@ -1,3 +1,5 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import { PGlite } from "@electric-sql/pglite";
 import { uuid_ossp } from "@electric-sql/pglite/contrib/uuid_ossp";
 import { pg_trgm } from "@electric-sql/pglite/contrib/pg_trgm";
@@ -24,7 +26,11 @@ export async function createTestDb(): Promise<TestDbClient> {
   const db = drizzle(client, { schema });
 
   // Run migrations
-  await migrate(db, { migrationsFolder: "../../packages/db/migrations" });
+  const migrationsFolder = path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    "../../db/migrations",
+  );
+  await migrate(db, { migrationsFolder });
 
   return db as unknown as TestDbClient;
 }

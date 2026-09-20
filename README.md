@@ -19,6 +19,8 @@
   <a href="https://github.com/kanbn/kan/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-purple"></a>
 </div>
 
+> **Fork Notice**: This repository is a fork of [Kan (Kanban)](https://github.com/kanbn/kan), originally developed by the Kan project at [https://github.com/kanbn/kan](https://github.com/kanbn/kan). All original project attribution and licensing (AGPL-3.0) remain intact.
+
 ## Features 💫
 
 - 👁️ **Board Visibility**: Control who can view and edit your boards

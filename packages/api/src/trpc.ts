@@ -9,7 +9,7 @@ import { ZodError } from "zod";
 
 import type { dbClient } from "@kan/db/client";
 import { initAuth } from "@kan/auth/server";
-import { createDrizzleClient } from "@kan/db/client";
+import { createDrizzleClient, ensureMigrations } from "@kan/db/client";
 import { createLogger } from "@kan/logger";
 
 const log = createLogger("api");
@@ -93,6 +93,7 @@ export const createInnerTRPCContext = (opts: CreateContextOptions) => {
 
 export const createTRPCContext = async ({ req }: CreateNextContextOptions) => {
   const db = createDrizzleClient();
+  await ensureMigrations(db);
   const baseAuth = initAuth(db);
   const headers = new Headers(req.headers as Record<string, string>);
   const auth = createAuthWithHeaders(baseAuth, headers);
@@ -110,6 +111,7 @@ export const createTRPCContext = async ({ req }: CreateNextContextOptions) => {
 
 export const createNextApiContext = async (req: NextApiRequest) => {
   const db = createDrizzleClient();
+  await ensureMigrations(db);
   const baseAuth = initAuth(db);
   const headers = new Headers(req.headers as Record<string, string>);
   const auth = createAuthWithHeaders(baseAuth, headers);
@@ -127,6 +129,7 @@ export const createNextApiContext = async (req: NextApiRequest) => {
 
 export const createRESTContext = async ({ req }: CreateNextContextOptions) => {
   const db = createDrizzleClient();
+  await ensureMigrations(db);
   const baseAuth = initAuth(db);
   const headers = new Headers(req.headers as Record<string, string>);
   const auth = createAuthWithHeaders(baseAuth, headers);

@@ -11,14 +11,25 @@ import { createPlugins } from "./plugins";
 import { configuredProviders } from "./providers";
 
 export const initAuth = (db: dbClient) => {
-  const baseURL = env("NEXT_PUBLIC_BASE_URL") || env("BETTER_AUTH_URL");
+  const isDev = process.env.NODE_ENV !== "production";
+  const defaultBaseURL = isDev
+    ? `http://localhost:${process.env.PORT || "3000"}`
+    : undefined;
+  const baseURL =
+    env("NEXT_PUBLIC_BASE_URL") || env("BETTER_AUTH_URL") || defaultBaseURL;
   const trustedOrigins =
     env("BETTER_AUTH_TRUSTED_ORIGINS")?.split(",").filter(Boolean) ?? [];
+
+  const devOrigins = isDev ? ["http://localhost:*", "http://127.0.0.1:*"] : [];
 
   return betterAuth({
     secret: env("BETTER_AUTH_SECRET"),
     baseURL,
-    trustedOrigins: [...(baseURL ? [baseURL] : []), ...trustedOrigins],
+    trustedOrigins: [
+      ...(baseURL ? [baseURL] : []),
+      ...devOrigins,
+      ...trustedOrigins,
+    ],
     database: drizzleAdapter(db, {
       provider: "pg",
       schema: {

@@ -53,6 +53,11 @@ __ENV.js
 i18n.cache
 
 # pgdata
+pgdata/
 /apps/web/pgdata
+**/pgdata/
+
+# pnpm
+.pnpm-store/
 
 .claude
