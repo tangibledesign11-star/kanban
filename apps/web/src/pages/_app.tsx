@@ -4,7 +4,7 @@ import "~/utils/i18n";
 import type { NextPage, Viewport } from "next";
 import type { AppProps, AppType } from "next/app";
 import type { ReactElement, ReactNode } from "react";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import { env } from "next-runtime-env";
 import { ThemeProvider } from "next-themes";
@@ -19,9 +19,10 @@ import { ModalProvider } from "~/providers/modal";
 import { PopupProvider } from "~/providers/popup";
 import { api } from "~/utils/api";
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -67,7 +68,7 @@ const MyApp: AppType = ({ Component, pageProps }: AppPropsWithLayout) => {
     <>
       <style jsx global>{`
         html {
-          font-family: ${jakarta.style.fontFamily};
+          font-family: ${inter.style.fontFamily}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
           position: relative;
@@ -81,7 +82,7 @@ const MyApp: AppType = ({ Component, pageProps }: AppPropsWithLayout) => {
         />
       )}
       <script src="/__ENV.js" />
-      <main className="font-sans">
+      <main className={`${inter.variable} font-sans`}>
         <KeyboardShortcutProvider>
           <LinguiProviderWrapper>
             <FontSizeProvider>

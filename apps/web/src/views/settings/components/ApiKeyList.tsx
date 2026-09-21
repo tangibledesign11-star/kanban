@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { HiEllipsisHorizontal } from "react-icons/hi2";
+import { MoreHorizontal } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import { authClient } from "@kan/auth/client";
@@ -115,7 +115,7 @@ export default function ApiKeyList() {
                   },
                 ]}
               >
-                <HiEllipsisHorizontal
+                <MoreHorizontal
                   size={25}
                   className="text-light-900 dark:text-dark-900"
                 />
@@ -141,31 +141,31 @@ export default function ApiKeyList() {
                 <tr>
                   <th
                     scope="col"
-                    className="w-[30%] rounded-tl-lg py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-light-900 dark:text-dark-900 sm:pl-6"
+                    className="w-[30%] rounded-tl-lg py-3.5 pl-4 pr-3 text-left text-sm font-medium text-light-900 dark:text-dark-900 sm:pl-6"
                   >
                     Name
                   </th>
                   <th
                     scope="col"
-                    className="w-[20%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[20%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     Created
                   </th>
                   <th
                     scope="col"
-                    className="w-[20%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[20%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     Last Used
                   </th>
                   <th
                     scope="col"
-                    className="w-[25%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[25%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     Key
                   </th>
                   <th
                     scope="col"
-                    className="w-[5%] rounded-tr-lg px-3 py-3.5 text-center text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[5%] rounded-tr-lg px-3 py-3.5 text-center text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     {/* Actions column */}
                   </th>

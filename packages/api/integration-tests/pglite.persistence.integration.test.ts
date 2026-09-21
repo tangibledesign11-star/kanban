@@ -9,7 +9,12 @@ import * as cardRepo from "@kan/db/repository/card.repo";
 import * as workspaceRepo from "@kan/db/repository/workspace.repo";
 import { generateUID } from "@kan/shared/utils";
 
-const TEST_DATA_DIR = path.resolve(process.cwd(), "./packages/api/pgdata-test");
+const TEST_DATA_DIR = path.resolve(
+  process.cwd().endsWith("packages/api")
+    ? process.cwd()
+    : path.join(process.cwd(), "packages/api"),
+  "./pgdata-test",
+);
 
 describe("PGlite Embedded Database Full Persistence & Feature Tests", () => {
   afterAll(async () => {

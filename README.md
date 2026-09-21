@@ -416,9 +416,13 @@ The MCP server exposes 46 tools across 7 resource types:
 | Labels            | get, create, update, delete                                         |
 | Members           | invite, remove, update role, manage invite links                    |
 
+## Documentation & Architecture 📚
+
+Architecture audits, implementation reports, setup guides, and changelogs are available in the [**docs/**](docs/) folder.
+
 ## Contributing 🤝
 
-We welcome contributions! Please read our [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+We welcome contributions! Please read our [contribution guidelines](docs/CONTRIBUTING.md) before submitting a pull request.
 
 ## Contributors 👥
 

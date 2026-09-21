@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { t } from "@lingui/core/macro";
-import { HiOutlineRectangleStack, HiOutlineStar, HiStar } from "react-icons/hi2";
+import { Layers, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "~/components/Button";
 import PatternedBackground from "~/components/PatternedBackground";
@@ -58,8 +58,8 @@ export function BoardsList({ isTemplate, archived = false }: { isTemplate?: bool
     return (
       <div className="z-10 flex h-full w-full flex-col items-center justify-center space-y-8 pb-[150px]">
         <div className="flex flex-col items-center">
-          <HiOutlineRectangleStack className="h-10 w-10 text-light-800 dark:text-dark-800" />
-          <p className="mb-2 mt-4 text-[14px] font-bold text-light-1000 dark:text-dark-950">
+          <Layers className="h-10 w-10 text-light-800 dark:text-dark-800" />
+          <p className="mb-2 mt-4 text-[14px] font-medium text-light-1000 dark:text-dark-950">
             {archived ? t`No archived boards` : t`No ${isTemplate ? "templates" : "boards"}`}
           </p>
           <p className="text-[14px] text-light-900 dark:text-dark-900">
@@ -117,12 +117,12 @@ export function BoardsList({ isTemplate, archived = false }: { isTemplate?: bool
                 aria-label={board.favorite ? "Remove from favorites" : "Add to favorites"}
               >
                 {board.favorite ? (
-                  <HiStar className="h-5 w-5 text-neutral-700 dark:text-dark-1000" />
+                  <Star className="h-5 w-5 text-neutral-700 dark:text-dark-1000 fill-current" />
                 ) : (
-                  <HiOutlineStar className="h-5 w-5 text-neutral-700 dark:text-dark-800" />
+                  <Star className="h-5 w-5 text-neutral-700 dark:text-dark-800" />
                 )}
               </button>
-              <p className="px-4 text-[14px] font-bold text-neutral-700 dark:text-dark-1000">
+              <p className="px-4 text-[14px] font-medium text-neutral-700 dark:text-dark-1000">
                 {board.name}
               </p>
             </div>

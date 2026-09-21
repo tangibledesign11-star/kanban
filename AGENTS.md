@@ -31,6 +31,7 @@ Kan is an open-source project management tool (Trello alternative) built with:
 - `packages/shared/` - Shared utilities
 - `packages/email/` - Email templates and sending
 - `packages/stripe/` - Stripe integration
+- `docs/` - Documentation, architecture audits, setup guides, and reports (all new .md documents must be created here)
 - `tooling/` - Shared tooling configs (ESLint, Prettier, TypeScript)
 
 ## Code Style

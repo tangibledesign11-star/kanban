@@ -1,7 +1,7 @@
 import type { DropResult } from "react-beautiful-dnd";
 import { t } from "@lingui/core/macro";
 import { DragDropContext, Draggable } from "react-beautiful-dnd";
-import { HiPlus, HiXMark } from "react-icons/hi2";
+import { Plus, X } from "lucide-react";
 
 import CircularProgress from "~/components/CircularProgress";
 import { StrictModeDroppable as Droppable } from "~/components/StrictModeDroppable";
@@ -147,7 +147,7 @@ export default function Checklists({
                             openModal("DELETE_CHECKLIST", checklist.publicId)
                           }
                         >
-                          <HiXMark size={16} />
+                          <X size={16} />
                         </button>
                         <button
                           onClick={() =>
@@ -155,7 +155,7 @@ export default function Checklists({
                           }
                           className="rounded-md p-1 text-light-900 hover:bg-light-100 dark:text-dark-700 dark:hover:bg-dark-100"
                         >
-                          <HiPlus size={16} />
+                          <Plus size={16} />
                         </button>
                       </div>
                     </div>

@@ -5,7 +5,7 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
-import { HiArrowDownTray, HiChevronDown, HiOutlinePlusSmall } from "react-icons/hi2";
+import { ChevronDown, Download, Plus } from "lucide-react";
 import { useState } from "react";
 
 import Button from "~/components/Button";
@@ -49,7 +49,7 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
       />
       <div className="m-auto h-full max-w-[1100px] p-8 px-5 md:px-28 md:py-12">
         <div className="relative z-10 mb-8 flex w-full items-center justify-between">
-          <h1 className="font-bold tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
+          <h1 className="font-medium tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
             {t`${isTemplate ? "Templates" : "Boards"}`}
           </h1>
           <div className="flex gap-2">
@@ -67,7 +67,7 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
                   }}
                   disabled={!canCreateBoard}
                   iconLeft={
-                    <HiArrowDownTray aria-hidden="true" className="h-4 w-4" />
+                    <Download aria-hidden="true" className="h-4 w-4" />
                   }
                 >
                   {t`Import`}
@@ -89,7 +89,7 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
                 }}
                 disabled={!canCreateBoard}
                 iconLeft={
-                  <HiOutlinePlusSmall aria-hidden="true" className="h-4 w-4" />
+                  <Plus aria-hidden="true" className="h-4 w-4" />
                 }
               >
                 {t`New`}
@@ -137,10 +137,10 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
                   onChange={(tab) => setActiveTab(tab)}
                 >
                   <div className="relative mb-4">
-                    <ListboxButton className="w-full appearance-none rounded-md border-0 bg-light-50 py-3 pl-3 pr-10 text-left text-sm font-semibold text-light-1000 shadow-sm ring-1 ring-inset ring-light-300  dark:bg-dark-50 dark:text-dark-1000 dark:ring-dark-300 dark:focus:ring-dark-500">
+                    <ListboxButton className="w-full appearance-none rounded-md border-0 bg-light-50 py-3 pl-3 pr-10 text-left text-sm font-medium text-light-1000 shadow-sm ring-1 ring-inset ring-light-300  dark:bg-dark-50 dark:text-dark-1000 dark:ring-dark-300 dark:focus:ring-dark-500">
                       {boardsTabs.find((tab) => tab.key === activeTab)?.label ??
                         "Select a tab"}
-                      <HiChevronDown
+                      <ChevronDown
                         aria-hidden="true"
                         className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-light-900 dark:text-dark-900"
                       />
@@ -152,7 +152,7 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
                           value={tab.key}
                           className={({ selected }) =>
                             `relative cursor-pointer select-none py-2 pl-3 pr-9 ${selected
-                              ? "font-bold text-light-1000 dark:text-dark-1000"
+                              ? "font-medium text-light-1000 dark:text-dark-1000"
                               : "font-normal text-light-1000 dark:text-dark-1000"
                             }`
                           }
@@ -175,7 +175,7 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
                         key={tab.key}
                         type="button"
                         onClick={() => setActiveTab(tab.key)}
-                        className={`whitespace-nowrap px-1 py-0 mt-2 mb-8 text-sm font-semibold transition-colors focus:outline-none ${activeTab === tab.key
+                        className={`whitespace-nowrap px-1 py-0 mt-2 mb-8 text-sm font-medium transition-colors focus:outline-none ${activeTab === tab.key
                           ? "border-light-1000 text-light-1000 dark:border-dark-1000 dark:text-dark-1000"
                           : "border-transparent text-light-900 hover:border-light-950 hover:text-light-950 dark:text-dark-900 dark:hover:border-white/20 dark:hover:text-dark-950"
                           }`}

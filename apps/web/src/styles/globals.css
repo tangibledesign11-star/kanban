@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  b,
+  strong,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  th {
+    font-weight: 500;
+  }
+
+  .prose :where(h1, h2, h3, h4, h5, h6, strong, b, th):not(:where([class~="not-prose"] *)) {
+    font-weight: 500;
+  }
+}
+
 html {
   font-size: 14px;
 }

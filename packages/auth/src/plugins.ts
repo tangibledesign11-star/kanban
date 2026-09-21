@@ -188,7 +188,7 @@ export function createPlugins(db: dbClient) {
       rateLimit: {
         enabled: true,
         timeWindow: 1000 * 60, // 1 minute
-        maxRequests: 100, // 100 requests per minute
+        maxRequests: 600, // 600 requests per minute
       },
     }),
     magicLink({

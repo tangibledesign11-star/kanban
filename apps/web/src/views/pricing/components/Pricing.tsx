@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { useState } from "react";
-import { HiBolt, HiCheckCircle } from "react-icons/hi2";
+import { CheckCircle2, Zap } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 type Frequency = "monthly" | "annually";
@@ -85,7 +85,7 @@ const Pricing = () => {
           <p>{t`Pricing`}</p>
         </div>
 
-        <p className="mt-4 text-center text-3xl font-bold text-light-1000 dark:text-dark-1000 lg:text-5xl">
+        <p className="mt-4 text-center text-3xl font-medium text-light-1000 dark:text-dark-1000 lg:text-5xl">
           {t`Simple pricing`}
         </p>
         <p className="text:md lg:text-md mt-6 max-w-[500px] text-center text-dark-900">
@@ -93,15 +93,15 @@ const Pricing = () => {
         </p>
 
         <div className="mt-14 flex flex-col items-center justify-center">
-          <div className="mb-8 flex items-center gap-2 rounded-full border bg-white px-4 py-1.5 text-center text-xs font-bold text-gray-800 dark:border-dark-300 dark:bg-dark-1000 dark:text-gray-800 lg:text-sm">
-            <HiBolt />
+          <div className="mb-8 flex items-center gap-2 rounded-full border bg-white px-4 py-1.5 text-center text-xs font-medium text-gray-800 dark:border-dark-300 dark:bg-dark-1000 dark:text-gray-800 lg:text-sm">
+            <Zap className="h-4 w-4" />
             <p>{t`Launch offer: unlimited seats for just $29/month with Pro`}</p>
           </div>
           <fieldset aria-label={t`Payment frequency`}>
             <RadioGroup
               value={frequency}
               onChange={(value) => setFrequency(value)}
-              className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs/5 font-semibold ring-1 ring-inset ring-light-600 dark:ring-dark-600"
+              className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs/5 font-medium ring-1 ring-inset ring-light-600 dark:ring-dark-600"
             >
               {frequencies.map((option) => (
                 <Radio
@@ -140,13 +140,13 @@ const Pricing = () => {
                   tier.highlighted
                     ? "text-dark-1000 dark:text-dark-1000"
                     : "text-dark-50 dark:text-dark-1000",
-                  "text-lg/8 font-semibold",
+                  "text-lg/8 font-medium",
                 )}
               >
                 {tier.name}
               </h3>
               {tier.highlighted && frequency?.value === "annually" ? (
-                <p className="rounded-full bg-light-50 px-2.5 py-1 text-[12px] font-semibold text-dark-500 dark:bg-dark-1000 dark:text-dark-50">
+                <p className="rounded-full bg-light-50 px-2.5 py-1 text-[12px] font-medium text-dark-500 dark:bg-dark-1000 dark:text-dark-50">
                   -20%
                 </p>
               ) : null}
@@ -162,7 +162,7 @@ const Pricing = () => {
             <p className="mt-6 flex items-baseline gap-x-1">
               <span
                 className={twMerge(
-                  "text-3xl font-semibold tracking-tight text-light-100",
+                  "text-3xl font-medium tracking-tight text-light-100",
                   tier.highlighted
                     ? "text-light-50 dark:text-dark-1000"
                     : "text-gray-900 dark:text-dark-1000",
@@ -172,7 +172,7 @@ const Pricing = () => {
                 {tier.price[frequency?.value ?? "monthly"]}
               </span>
               {tier.showPriceSuffix && (
-                <span className="text-sm/6 font-semibold text-light-50 dark:text-dark-900">
+                <span className="text-sm/6 font-medium text-light-50 dark:text-dark-900">
                   {frequency?.priceSuffix}
                 </span>
               )}
@@ -184,14 +184,14 @@ const Pricing = () => {
                 tier.highlighted
                   ? "bg-light-50 text-dark-50 shadow-sm dark:bg-dark-1000 dark:text-dark-50"
                   : "bg-dark-50 text-light-50 dark:bg-dark-200 dark:text-dark-1000",
-                "mt-6 block rounded-md px-3 py-2 text-center text-sm/6 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+                "mt-6 block rounded-md px-3 py-2 text-center text-sm/6 font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
               )}
             >
               {tier.buttonText}
             </Link>
             <p
               className={twMerge(
-                "mt-8 text-sm/6 font-bold",
+                "mt-8 text-sm/6 font-medium",
                 tier.highlighted
                   ? "text-light-100 dark:text-dark-1000"
                   : "text-dark-50 dark:text-dark-1000",
@@ -210,7 +210,7 @@ const Pricing = () => {
             >
               {tier.features.map((feature) => (
                 <li key={feature} className="flex items-center gap-x-3">
-                  <HiCheckCircle className="h-5 w-5" />
+                  <CheckCircle2 className="h-5 w-5" />
                   {feature}
                 </li>
               ))}

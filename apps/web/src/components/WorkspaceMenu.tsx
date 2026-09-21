@@ -3,7 +3,7 @@ import { Button, Menu, Transition } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
 import { Fragment, useState } from "react";
-import { HiCheck, HiMagnifyingGlass } from "react-icons/hi2";
+import { Check, Search } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import { useKeyboardShortcut } from "~/providers/keyboard-shortcuts";
@@ -69,13 +69,13 @@ export default function WorkspaceMenu({
                 title={isCollapsed ? workspace.name : undefined}
               >
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-md bg-indigo-700">
-                  <span className="text-xs font-bold leading-none text-white">
+                  <span className="text-xs font-medium leading-none text-white">
                     {workspace.name.charAt(0).toUpperCase()}
                   </span>
                 </span>
                 <span
                   className={twMerge(
-                    "ml-2 min-w-0 flex-1 truncate text-left text-sm font-bold text-neutral-900 dark:text-dark-1000",
+                    "ml-2 min-w-0 flex-1 truncate text-left text-sm font-medium text-neutral-900 dark:text-dark-1000",
                     isCollapsed && "md:hidden",
                   )}
                 >
@@ -100,7 +100,7 @@ export default function WorkspaceMenu({
                   )}
                   onClick={() => setIsOpen(true)}
                 >
-                  <HiMagnifyingGlass className="h-4 w-4" aria-hidden="true" />
+                  <Search className="h-4 w-4" aria-hidden="true" />
                 </Button>
               </Tooltip>
             </div>
@@ -142,7 +142,7 @@ export default function WorkspaceMenu({
                       </div>
                       {workspace.publicId === availableWorkspace.publicId && (
                         <span>
-                          <HiCheck className="h-4 w-4" aria-hidden="true" />
+                          <Check className="h-4 w-4" aria-hidden="true" />
                         </span>
                       )}
                     </button>

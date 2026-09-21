@@ -1,12 +1,12 @@
 import { t } from "@lingui/core/macro";
 import {
-  HiEllipsisHorizontal,
-  HiHashtag,
-  HiLink,
-  HiOutlineCheckCircle,
-  HiOutlineDocumentDuplicate,
-  HiOutlineTrash,
-} from "react-icons/hi2";
+  CheckCircle2,
+  Copy,
+  Hash,
+  Link2,
+  MoreHorizontal,
+  Trash2,
+} from "lucide-react";
 
 import { authClient } from "@kan/auth/client";
 
@@ -106,14 +106,14 @@ export default function CardDropdown({
     {
       label: t`Copy card link`,
       action: handleCopyCardLink,
-      icon: <HiLink className="h-[16px] w-[16px] text-dark-900" />,
+      icon: <Link2 className="h-[16px] w-[16px] text-dark-900" />,
     },
     ...(ticketNumber
       ? [
           {
             label: t`Copy ticket ID`,
             action: handleCopyTicketId,
-            icon: <HiHashtag className="h-[16px] w-[16px] text-dark-900" />,
+            icon: <Hash className="h-[16px] w-[16px] text-dark-900" />,
           },
         ]
       : []),
@@ -123,7 +123,7 @@ export default function CardDropdown({
             label: t`Add checklist`,
             action: () => openModal("ADD_CHECKLIST"),
             icon: (
-              <HiOutlineCheckCircle className="h-[16px] w-[16px] text-dark-900" />
+              <CheckCircle2 className="h-[16px] w-[16px] text-dark-900" />
             ),
           },
           {
@@ -140,7 +140,7 @@ export default function CardDropdown({
               });
             },
             icon: (
-              <HiOutlineDocumentDuplicate className="h-[16px] w-[16px] text-dark-900" />
+              <Copy className="h-[16px] w-[16px] text-dark-900" />
             ),
             disabled: duplicateCard.isPending || !listPublicId,
           },
@@ -152,7 +152,7 @@ export default function CardDropdown({
             label: t`Delete card`,
             action: () => openModal("DELETE_CARD"),
             icon: (
-              <HiOutlineTrash className="h-[16px] w-[16px] text-dark-900" />
+              <Trash2 className="h-[16px] w-[16px] text-dark-900" />
             ),
           },
         ]
@@ -165,7 +165,7 @@ export default function CardDropdown({
 
   return (
     <Dropdown items={items}>
-      <HiEllipsisHorizontal className="h-5 w-5 text-dark-900" />
+      <MoreHorizontal className="h-5 w-5 text-dark-900" />
     </Dropdown>
   );
 }

@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
 import { useForm } from "react-hook-form";
-import { HiCheck, HiMiniStar } from "react-icons/hi2";
+import { Check, Star } from "lucide-react";
 import { z } from "zod";
 
 import Button from "~/components/Button";
@@ -133,9 +133,9 @@ const UpdateWorkspaceUrlForm = ({
           iconRight={
             isWorkspaceSlugAvailable?.isAvailable ||
             (workspacePlan === "pro" && slug === workspaceUrl) ? (
-              <HiMiniStar className="h-4 w-4 text-yellow-500" />
+              <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
             ) : isWorkspaceSlugAvailable?.isAvailable ? (
-              <HiCheck className="h-4 w-4 dark:text-dark-1000" />
+              <Check className="h-4 w-4 dark:text-dark-1000" />
             ) : null
           }
           disabled={disabled}

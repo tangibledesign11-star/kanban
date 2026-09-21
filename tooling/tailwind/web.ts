@@ -8,7 +8,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-plus-jakarta-sans), Plus Jakarta Sans"],
+        sans: ["var(--font-inter)", "Inter", "sans-serif"],
+      },
+      fontWeight: {
+        thin: "100",
+        extralight: "200",
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "500",
+        bold: "500",
+        extrabold: "500",
+        black: "500",
       },
       fontSize: {
         sm: "0.8rem",

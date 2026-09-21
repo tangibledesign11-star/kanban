@@ -28,18 +28,18 @@ import {
   useState,
 } from "react";
 import {
-  HiH1,
-  HiH2,
-  HiH3,
-  HiOutlineBold,
-  HiOutlineChatBubbleLeftEllipsis,
-  HiOutlineCodeBracket,
-  HiOutlineCodeBracketSquare,
-  HiOutlineItalic,
-  HiOutlineListBullet,
-  HiOutlineNumberedList,
-  HiOutlineStrikethrough,
-} from "react-icons/hi2";
+  Bold,
+  Code,
+  Heading1,
+  Heading2,
+  Heading3,
+  Italic,
+  List,
+  ListOrdered,
+  Quote,
+  SquareCode,
+  Strikethrough,
+} from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import tippy from "tippy.js";
 import { Markdown } from "tiptap-markdown";
@@ -393,19 +393,19 @@ const getCommandItems = (disableHeadings: boolean): SlashCommandItem[] => {
     : [
         {
           title: "Heading 1",
-          icon: <HiH1 />,
+          icon: <Heading1 className="h-4 w-4" />,
           command: ({ editor }) =>
             editor.chain().focus().setHeading({ level: 1 }).run(),
         },
         {
           title: "Heading 2",
-          icon: <HiH2 />,
+          icon: <Heading2 className="h-4 w-4" />,
           command: ({ editor }) =>
             editor.chain().focus().setHeading({ level: 2 }).run(),
         },
         {
           title: "Heading 3",
-          icon: <HiH3 />,
+          icon: <Heading3 className="h-4 w-4" />,
           command: ({ editor }) =>
             editor.chain().focus().setHeading({ level: 3 }).run(),
         },
@@ -415,22 +415,22 @@ const getCommandItems = (disableHeadings: boolean): SlashCommandItem[] => {
     ...headingCommands,
     {
       title: "Bullet List",
-      icon: <HiOutlineListBullet />,
+      icon: <List className="h-4 w-4" />,
       command: ({ editor }) => editor.chain().focus().toggleBulletList().run(),
     },
     {
       title: "Ordered List",
-      icon: <HiOutlineNumberedList />,
+      icon: <ListOrdered className="h-4 w-4" />,
       command: ({ editor }) => editor.chain().focus().toggleOrderedList().run(),
     },
     {
       title: "Blockquote",
-      icon: <HiOutlineChatBubbleLeftEllipsis />,
+      icon: <Quote className="h-4 w-4" />,
       command: ({ editor }) => editor.chain().focus().toggleBlockquote().run(),
     },
     {
       title: "Code Block",
-      icon: <HiOutlineCodeBracketSquare />,
+      icon: <SquareCode className="h-4 w-4" />,
       command: ({ editor }) => editor.chain().focus().toggleCodeBlock().run(),
     },
   ];
@@ -647,28 +647,28 @@ function EditorBubbleMenu({ editor }: { editor: TiptapEditor | null }) {
   const bubbleMenuItems = [
     {
       title: "Bold",
-      icon: <HiOutlineBold />,
+      icon: <Bold className="h-4 w-4" />,
       keys: ["meta", "b"],
       onClick: () => editor?.chain().focus().toggleBold().run(),
       active: editor?.isActive("bold"),
     },
     {
       title: "Italic",
-      icon: <HiOutlineItalic />,
+      icon: <Italic className="h-4 w-4" />,
       keys: ["meta", "i"],
       onClick: () => editor?.chain().focus().toggleItalic().run(),
       active: editor?.isActive("italic"),
     },
     {
       title: "Strikethrough",
-      icon: <HiOutlineStrikethrough />,
+      icon: <Strikethrough className="h-4 w-4" />,
       keys: ["meta", "shift", "s"],
       onClick: () => editor?.chain().focus().toggleStrike().run(),
       active: editor?.isActive("strike"),
     },
     {
       title: "Code",
-      icon: <HiOutlineCodeBracket />,
+      icon: <Code className="h-4 w-4" />,
       keys: ["meta", "e"],
       onClick: () => editor?.chain().focus().toggleCode().run(),
       active: editor?.isActive("code"),

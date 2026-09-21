@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { t } from "@lingui/core/macro";
 import { useEffect, useRef, useState } from "react";
-import { HiLink, HiXMark } from "react-icons/hi2";
+import { Link2, X } from "lucide-react";
 
 import Badge from "~/components/Badge";
 import Editor from "~/components/Editor";
@@ -110,7 +110,7 @@ export function CardModal({
                           {data.cardNumber}
                         </span>
                       )}
-                    <h1 className="font-bold leading-[2.3rem] tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
+                    <h1 className="font-medium leading-[2.3rem] tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
                       {data?.title}
                     </h1>
                   </>
@@ -123,7 +123,7 @@ export function CardModal({
                   className="rounded p-1.5 transition-all hover:bg-light-200 focus:outline-none dark:hover:bg-dark-100"
                   aria-label="Copy card link"
                 >
-                  <HiLink className="h-4 w-4 text-light-900 dark:text-dark-900" />
+                  <Link2 className="h-4 w-4 text-light-900 dark:text-dark-900" />
                 </button>
                 <button
                   type="button"
@@ -148,7 +148,7 @@ export function CardModal({
                     }, 400);
                   }}
                 >
-                  <HiXMark
+                  <X
                     size={18}
                     className="text-light-900 dark:text-dark-900"
                   />

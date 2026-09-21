@@ -1,6 +1,6 @@
 import { t } from "@lingui/core/macro";
 import React, { useEffect, useRef, useState } from "react";
-import { HiCheckCircle, HiXCircle } from "react-icons/hi2";
+import { CheckCircle2, XCircle } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 type FrequencyValue = "monthly" | "annually";
@@ -350,7 +350,7 @@ const FeatureComparisonTable = ({
         const rest = spaceIndex === -1 ? "" : text.slice(spaceIndex);
         return (
           <div className="flex items-center gap-2.5">
-            <HiCheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-light-1000 dark:text-dark-1000" />
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-light-1000 dark:text-dark-1000" />
             <span className="text-sm font-medium">
               <span className="text-light-1000 dark:text-dark-1000">{firstWord}</span>
               <span className="text-light-950 dark:text-dark-800">{rest}</span>
@@ -361,7 +361,7 @@ const FeatureComparisonTable = ({
 
       return (
         <div className="flex items-center gap-2.5">
-          <HiCheckCircle
+          <CheckCircle2
             className={twMerge(
               "mt-0.5 h-4 w-4 shrink-0",
               highlight
@@ -386,7 +386,7 @@ const FeatureComparisonTable = ({
     if (value) {
       return (
         <div className="flex items-center gap-2.5">
-          <HiCheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-light-1000 dark:text-dark-1000" />
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-light-1000 dark:text-dark-1000" />
           <span className="text-sm font-medium text-light-1000 dark:text-dark-950">
             {label}
           </span>
@@ -396,7 +396,7 @@ const FeatureComparisonTable = ({
 
     return (
       <div className="flex items-center gap-2.5">
-        <HiXCircle className="mt-0.5 h-4 w-4 shrink-0 text-light-400 dark:text-dark-600" />
+        <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-light-400 dark:text-dark-600" />
         <span className="text-sm font-medium text-light-800 dark:text-dark-800">
           {label}
         </span>
@@ -445,7 +445,7 @@ const FeatureComparisonTable = ({
                     <div
                       key={`fixed-${plan.id}`}
                       className={twMerge(
-                        "flex items-center px-6 py-3 text-left text-base font-semibold",
+                        "flex items-center px-6 py-3 text-left text-base font-medium",
                         isMostPopular
                           ? "bg-light-200 text-light-1000 dark:bg-dark-100 dark:text-dark-1000"
                           : "bg-light-50 text-dark-50 dark:bg-dark-50 dark:text-dark-1000",
@@ -469,7 +469,7 @@ const FeatureComparisonTable = ({
                       key={plan.id}
                       scope="col"
                       className={twMerge(
-                        "w-1/4 px-6 py-4 text-left text-base font-semibold",
+                        "w-1/4 px-6 py-4 text-left text-base font-medium",
                         isMostPopular
                           ? "bg-light-200 text-light-1000 dark:bg-dark-100 dark:text-dark-1000"
                           : "bg-light-50 text-dark-50 dark:bg-dark-50 dark:text-dark-1000",
@@ -495,7 +495,7 @@ const FeatureComparisonTable = ({
                           <td
                             key={plan.id}
                             className={twMerge(
-                              "border-t px-6 py-3 text-left text-sm font-semibold text-dark-900 dark:text-dark-900",
+                              "border-t px-6 py-3 text-left text-sm font-medium text-dark-900 dark:text-dark-900",
                               isPro
                                 ? "border-light-400 bg-light-200 dark:border-dark-400 dark:bg-dark-100"
                                 : "border-light-300 bg-light-50 dark:border-dark-400 dark:bg-dark-50",

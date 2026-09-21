@@ -1,7 +1,7 @@
 import { t } from "@lingui/core/macro";
 import type { Locale as DateFnsLocale } from "date-fns";
 import { format } from "date-fns";
-import { HiEllipsisHorizontal } from "react-icons/hi2";
+import { MoreHorizontal } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import Dropdown from "~/components/Dropdown";
@@ -142,7 +142,7 @@ function TableRow({
                   },
                 ]}
               >
-                <HiEllipsisHorizontal
+                <MoreHorizontal
                   size={25}
                   className="text-light-900 dark:text-dark-900"
                 />
@@ -209,37 +209,37 @@ export default function WebhookList({ workspacePublicId }: WebhookListProps) {
                 <tr>
                   <th
                     scope="col"
-                    className="w-[25%] rounded-tl-lg py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-light-900 dark:text-dark-900 sm:pl-6"
+                    className="w-[25%] rounded-tl-lg py-3.5 pl-4 pr-3 text-left text-sm font-medium text-light-900 dark:text-dark-900 sm:pl-6"
                   >
                     {t`Name`}
                   </th>
                   <th
                     scope="col"
-                    className="w-[30%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[30%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     {t`URL`}
                   </th>
                   <th
                     scope="col"
-                    className="w-[20%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[20%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     {t`Events`}
                   </th>
                   <th
                     scope="col"
-                    className="w-[10%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[10%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     {t`Status`}
                   </th>
                   <th
                     scope="col"
-                    className="w-[10%] px-3 py-3.5 text-left text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[10%] px-3 py-3.5 text-left text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     {t`Created`}
                   </th>
                   <th
                     scope="col"
-                    className="w-[5%] rounded-tr-lg px-3 py-3.5 text-center text-sm font-semibold text-light-900 dark:text-dark-900"
+                    className="w-[5%] rounded-tr-lg px-3 py-3.5 text-center text-sm font-medium text-light-900 dark:text-dark-900"
                   >
                     {/* Actions column */}
                   </th>

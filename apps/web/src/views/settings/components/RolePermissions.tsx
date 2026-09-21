@@ -115,13 +115,13 @@ export function RolePermissions() {
         <table className="min-w-full table-fixed divide-y divide-light-600 overflow-visible text-left text-sm dark:divide-dark-600">
           <thead className="rounded-t-lg bg-light-300 dark:bg-dark-300">
             <tr>
-              <th className="w-1/2 rounded-tl-lg px-4 py-3 text-left text-xs font-semibold tracking-wide text-light-900 dark:text-dark-900">
+              <th className="w-1/2 rounded-tl-lg px-4 py-3 text-left text-xs font-medium tracking-wide text-light-900 dark:text-dark-900">
                 {t`Permission`}
               </th>
               {orderedRoleNames.map((role) => (
                 <th
                   key={role}
-                  className="w-1/6 px-4 py-3 text-center text-xs font-semibold tracking-wide text-light-900 dark:text-dark-900"
+                  className="w-1/6 px-4 py-3 text-center text-xs font-medium tracking-wide text-light-900 dark:text-dark-900"
                 >
                   {formatRoleLabel(role)}
                 </th>
@@ -136,7 +136,7 @@ export function RolePermissions() {
               <tr className="bg-light-100 dark:bg-dark-200">
                 <td
                   colSpan={1 + orderedRoleNames.length}
-                  className="px-4 py-2 text-xs font-semibold tracking-wide text-light-900 dark:text-dark-900"
+                  className="px-4 py-2 text-xs font-medium tracking-wide text-light-900 dark:text-dark-900"
                 >
                   {category.label}
                 </td>

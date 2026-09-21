@@ -61,7 +61,7 @@ export default function HomeView() {
               </div> */}
             </div>
 
-            <p className="mt-2 text-center text-4xl font-bold text-light-1000 dark:text-dark-1000 lg:text-5xl">
+            <p className="mt-2 text-center text-4xl font-medium text-light-1000 dark:text-dark-1000 lg:text-5xl">
               <Trans>
                 The open source <br /> alternative to Trello
               </Trans>

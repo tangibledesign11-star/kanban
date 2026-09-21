@@ -75,7 +75,7 @@ const Header = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
           <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between lg:px-4">
             <div className="my-auto flex items-center justify-between">
               <Link href="/">
-                <h1 className="text-lg font-bold tracking-tight text-neutral-900 dark:text-dark-1000 lg:w-[200px]">
+                <h1 className="text-lg font-medium tracking-tight text-neutral-900 dark:text-dark-1000 lg:w-[200px]">
                   kan.bn
                 </h1>
               </Link>
@@ -88,7 +88,7 @@ const Header = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
                   href={item.href}
                   target={item.openInNewTab ? "_blank" : undefined}
                   rel={item.openInNewTab ? "noopener noreferrer" : undefined}
-                  className="text-sm font-bold"
+                  className="text-sm font-medium"
                 >
                   {item.label}
                 </Link>
@@ -142,7 +142,7 @@ const Header = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
           <div className="mt-[6rem] flex h-full flex-col space-y-8 px-5">
             {Object.entries(groupedMenuItems).map(([group, items]) => (
               <div key={group} className="flex flex-col space-y-4">
-                <div className="text-sm font-bold text-light-900 dark:text-dark-900">
+                <div className="text-sm font-medium text-light-900 dark:text-dark-900">
                   {group}
                 </div>
                 {items.map((item) => (
@@ -151,7 +151,7 @@ const Header = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
                     href={item.href}
                     target={item.openInNewTab ? "_blank" : undefined}
                     rel={item.openInNewTab ? "noopener noreferrer" : undefined}
-                    className="transform text-lg font-bold text-light-1000 dark:text-dark-1000"
+                    className="transform text-lg font-medium text-light-1000 dark:text-dark-1000"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}

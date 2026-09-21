@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
-import { HiBolt, HiCheckCircle } from "react-icons/hi2";
+import { CheckCircle2, Zap } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 type FrequencyValue = "monthly" | "annually";
@@ -155,7 +155,7 @@ const Pricing = ({
             {tier.id === "tier-pro" && (
               <div className="absolute right-2 top-2 z-10">
                 <span className="inline-flex items-center gap-1 rounded-full border border-light-400 bg-light-100 px-3 py-1 text-center text-xs text-dark-600 dark:border-dark-400 dark:bg-dark-100 dark:text-dark-900">
-                  <HiBolt className="h-3 w-3 -ml-0.5" />
+                  <Zap className="h-3 w-3 -ml-0.5" />
                   {t`Launch offer`}
                 </span>
               </div>
@@ -163,7 +163,7 @@ const Pricing = ({
             <h3
               id={tier.id}
               className={twMerge(
-                "mb-4 flex items-center text-base font-semibold",
+                "mb-4 flex items-center text-base font-medium",
                 tier.mostPopular
                   ? "text-light-1000 dark:text-dark-1000"
                   : "text-light-1000 dark:text-dark-1000",
@@ -176,7 +176,7 @@ const Pricing = ({
               <p className="flex items-baseline gap-x-1">
                 <span
                   className={twMerge(
-                    "text-2xl font-semibold",
+                    "text-2xl font-medium",
                     tier.mostPopular
                       ? "text-light-1000 dark:text-dark-1000"
                       : "text-light-1000 dark:text-dark-1000",
@@ -188,7 +188,7 @@ const Pricing = ({
                 {tier.id === "tier-pro" && (
                   <span
                     className={twMerge(
-                      "text-2xl font-semibold line-through",
+                      "text-2xl font-medium line-through",
                       tier.mostPopular
                         ? "text-light-600 dark:text-dark-600"
                         : "text-light-600 dark:text-dark-600",
@@ -246,7 +246,7 @@ const Pricing = ({
                   key={`${tier.id}-feature-${index}`}
                   className="flex items-start gap-x-2.5"
                 >
-                  <HiCheckCircle
+                  <CheckCircle2
                     className="mt-0.5 h-4 w-4 shrink-0 text-light-1000 dark:text-dark-1000"
                   />
                   <span className="text-sm text-dark-600 dark:text-dark-800">

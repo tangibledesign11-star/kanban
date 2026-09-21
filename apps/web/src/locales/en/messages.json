@@ -18,7 +18,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        102
+        101
       ]
     ],
     "translation": ", or see our"
@@ -59,7 +59,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        321
+        320
       ]
     ],
     "translation": "{0} | {1}"
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        59
+        58
       ]
     ],
     "translation": "{0} has been added to your favorites."
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        60
+        59
       ]
     ],
     "translation": "{0} has been removed from your favorites."
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/views/board/components/NewCardForm.tsx",
-        462
+        455
       ]
     ],
     "translation": "{0} labels"
@@ -123,7 +123,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        557
+        553
       ]
     ],
     "translation": "{0} not found"
@@ -292,6 +292,18 @@
     ],
     "translation": "A powerful, flexible kanban app that helps you organise work, track progress, and deliver results—all in one place."
   },
+  "0zcOe4": {
+    "translation": "Accepts POST requests using the MCP Streamable HTTP transport with Bearer token authentication.",
+    "message": "Accepts POST requests using the MCP Streamable HTTP transport with Bearer token authentication.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        205
+      ]
+    ]
+  },
   "AeXO77": {
     "message": "Account",
     "placeholders": {},
@@ -299,7 +311,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        41
+        42
       ]
     ],
     "translation": "Account"
@@ -384,6 +396,18 @@
     ],
     "translation": "Active"
   },
+  "bRZlRf": {
+    "translation": "Active API keys:",
+    "message": "Active API keys:",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        232
+      ]
+    ]
+  },
   "XJOV1Y": {
     "message": "Activity",
     "placeholders": {},
@@ -391,7 +415,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        476
+        475
       ],
       [
         "src/views/public/board/CardModal.tsx",
@@ -507,10 +531,22 @@
     "origin": [
       [
         "src/views/card/components/ChecklistItemRow.tsx",
-        169
+        168
       ]
     ],
     "translation": "Add details..."
+  },
+  "cwen2n": {
+    "translation": "Add Kan to your AI workspace configuration file.",
+    "message": "Add Kan to your AI workspace configuration file.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        294
+      ]
+    ]
   },
   "lyqwgn": {
     "message": "Add label",
@@ -551,7 +587,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        125
+        124
       ]
     ],
     "translation": "Add to favorites"
@@ -718,7 +754,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        56
+        55
       ]
     ],
     "translation": "Added to favorites"
@@ -997,7 +1033,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        65
+        66
       ],
       [
         "src/views/pricing/components/FeatureComparisonTable.tsx",
@@ -1013,7 +1049,7 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        91
+        86
       ]
     ],
     "translation": "API key created"
@@ -1025,7 +1061,7 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        161
+        156
       ]
     ],
     "translation": "API key name"
@@ -1037,7 +1073,7 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        25
+        20
       ]
     ],
     "translation": "API key name cannot exceed 30 characters"
@@ -1049,7 +1085,7 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        24
+        19
       ]
     ],
     "translation": "API key name is required"
@@ -1109,7 +1145,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        114
+        113
       ]
     ],
     "translation": "Archive board"
@@ -1285,10 +1321,46 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        45
+        44
       ]
     ],
     "translation": "Attachment uploaded"
+  },
+  "P8fBlG": {
+    "translation": "Authentication",
+    "message": "Authentication",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        216
+      ]
+    ]
+  },
+  "dPsVh8": {
+    "translation": "Available · Streamable HTTP",
+    "message": "Available · Streamable HTTP",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        175
+      ]
+    ]
+  },
+  "CVMPOe": {
+    "translation": "Available Tools",
+    "message": "Available Tools",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        349
+      ]
+    ]
   },
   "1rWxEw": {
     "message": "Awaiting Customer",
@@ -1441,7 +1513,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        58
+        59
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
@@ -1485,11 +1557,11 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        530
+        526
       ],
       [
         "src/views/card/index.tsx",
-        321
+        320
       ],
       [
         "src/views/public/board/index.tsx",
@@ -1517,7 +1589,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        46
+        45
       ]
     ],
     "translation": "Board archived"
@@ -1577,7 +1649,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        46
+        45
       ]
     ],
     "translation": "Board unarchived"
@@ -1669,7 +1741,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        97
+        93
       ],
       [
         "src/views/pricing/components/FeatureComparisonTable.tsx",
@@ -2193,7 +2265,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        321
+        320
       ]
     ],
     "translation": "Card"
@@ -2233,11 +2305,11 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        384
+        383
       ],
       [
         "src/views/card/index.tsx",
-        421
+        420
       ]
     ],
     "translation": "Card not found"
@@ -2249,7 +2321,7 @@
     "origin": [
       [
         "src/views/board/components/NewCardForm.tsx",
-        328
+        321
       ]
     ],
     "translation": "Card title"
@@ -2261,7 +2333,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        308
+        304
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -2430,6 +2502,18 @@
     ],
     "translation": "Choose plan"
   },
+  "q/aIfc": {
+    "translation": "Claude Desktop (claude_desktop_config.json)",
+    "message": "Claude Desktop (claude_desktop_config.json)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        318
+      ]
+    ]
+  },
   "VHS0aJ": {
     "message": "Clear all custom permissions?",
     "placeholders": {},
@@ -2502,6 +2586,30 @@
     ],
     "translation": "Click on the link we've sent to {magicLinkRecipient} to sign in."
   },
+  "kdB8+t": {
+    "translation": "Client Configuration",
+    "message": "Client Configuration",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        290
+      ]
+    ]
+  },
+  "si9ji8": {
+    "translation": "Client configuration copied to clipboard",
+    "message": "Client configuration copied to clipboard",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        121
+      ]
+    ]
+  },
   "yz7wBu": {
     "message": "Close",
     "placeholders": {},
@@ -2513,7 +2621,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        375
+        374
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
@@ -2521,7 +2629,7 @@
       ],
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        136
+        131
       ]
     ],
     "translation": "Close"
@@ -2730,6 +2838,18 @@
     ],
     "translation": "Connect"
   },
+  "HjhRO7": {
+    "translation": "Connect AI assistants and coding agents to your Kan boards via standard Streamable HTTP MCP.",
+    "message": "Connect AI assistants and coding agents to your Kan boards via standard Streamable HTTP MCP.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        169
+      ]
+    ]
+  },
   "3jod3l": {
     "message": "Connect GitHub",
     "placeholders": {},
@@ -2825,7 +2945,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        100
+        99
       ],
       [
         "src/views/pricing/components/PricingTiers.tsx",
@@ -2913,10 +3033,54 @@
     "origin": [
       [
         "src/components/YouTubeEmbed/YouTubeDropdown.tsx",
-        47
+        42
       ]
     ],
     "translation": "Convert to link"
+  },
+  "6V3Ea3": {
+    "translation": "Copied",
+    "message": "Copied",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        201
+      ],
+      [
+        "src/views/settings/McpSettings.tsx",
+        337
+      ]
+    ]
+  },
+  "FxVG/l": {
+    "translation": "Copied to clipboard",
+    "message": "Copied to clipboard",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        70
+      ],
+      [
+        "src/views/settings/McpSettings.tsx",
+        120
+      ]
+    ]
+  },
+  "he3ygx": {
+    "translation": "Copy",
+    "message": "Copy",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        201
+      ]
+    ]
   },
   "5RkSzq": {
     "message": "Copy board link",
@@ -2953,6 +3117,18 @@
       ]
     ],
     "translation": "Copy checklists"
+  },
+  "dWVsxg": {
+    "translation": "Copy Config",
+    "message": "Copy Config",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        337
+      ]
+    ]
   },
   "fDQ7hA": {
     "message": "Copy labels",
@@ -3041,7 +3217,7 @@
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
-        527
+        520
       ],
       [
         "src/views/board/components/NewListForm.tsx",
@@ -3057,7 +3233,11 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        175
+        170
+      ],
+      [
+        "src/views/settings/McpSettings.tsx",
+        220
       ]
     ],
     "translation": "Create API key"
@@ -3069,7 +3249,7 @@
     "origin": [
       [
         "src/views/board/components/NewCardForm.tsx",
-        537
+        530
       ]
     ],
     "translation": "Create card"
@@ -3161,7 +3341,7 @@
     "origin": [
       [
         "src/views/board/components/NewCardForm.tsx",
-        424
+        417
       ],
       [
         "src/views/card/components/LabelSelector.tsx",
@@ -3177,7 +3357,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        92
+        88
       ],
       [
         "src/views/board/index.tsx",
@@ -3293,6 +3473,18 @@
       ]
     ],
     "translation": "Current password is required"
+  },
+  "44/DN2": {
+    "translation": "Cursor (~/.cursor/mcp.json)",
+    "message": "Cursor (~/.cursor/mcp.json)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        307
+      ]
+    ]
   },
   "nqdIhs": {
     "message": "Custom board templates",
@@ -3502,7 +3694,7 @@
       ],
       [
         "src/components/YouTubeEmbed/YouTubeDropdown.tsx",
-        52
+        47
       ],
       [
         "src/views/board/components/DeleteBoardConfirmation.tsx",
@@ -3558,7 +3750,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        136
+        135
       ]
     ],
     "translation": "Delete board"
@@ -3610,7 +3802,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        136
+        135
       ]
     ],
     "translation": "Delete template"
@@ -3830,7 +4022,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        109
+        108
       ]
     ],
     "translation": "docs"
@@ -3958,11 +4150,11 @@
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
-        479
+        472
       ],
       [
         "src/views/card/index.tsx",
-        153
+        152
       ]
     ],
     "translation": "Due date"
@@ -4066,7 +4258,7 @@
     "origin": [
       [
         "src/components/YouTubeEmbed/YouTubeDropdown.tsx",
-        42
+        37
       ],
       [
         "src/views/settings/components/WebhookList.tsx",
@@ -4082,7 +4274,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        105
+        104
       ],
       [
         "src/views/board/components/UpdateBoardSlugForm.tsx",
@@ -4835,7 +5027,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        52
+        51
       ]
     ],
     "translation": "Failed to upload attachment. Please try again."
@@ -4931,7 +5123,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        59
+        58
       ],
       [
         "src/components/UserMenu.tsx",
@@ -4947,7 +5139,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        33
+        32
       ]
     ],
     "translation": "Feedback sent"
@@ -4975,6 +5167,18 @@
       ]
     ],
     "translation": "Filter"
+  },
+  "E9Ul0A": {
+    "translation": "Filter tools...",
+    "message": "Filter tools...",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        361
+      ]
+    ]
   },
   "l31EoQ": {
     "message": "Find answers to common questions about Kan. Can't find what you're looking for? Feel free to <0>contact us</0>.",
@@ -5151,6 +5355,18 @@
       ]
     ],
     "translation": "General"
+  },
+  "MwA5yx": {
+    "translation": "Generate key",
+    "message": "Generate key",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        277
+      ]
+    ]
   },
   "ZDIydz": {
     "message": "Get started",
@@ -5351,7 +5567,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        105
+        101
       ],
       [
         "src/pages/404.tsx",
@@ -5379,7 +5595,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        129
+        125
       ]
     ],
     "translation": "Go to members"
@@ -5391,7 +5607,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        141
+        137
       ]
     ],
     "translation": "Go to settings"
@@ -5403,7 +5619,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        117
+        113
       ]
     ],
     "translation": "Go to templates"
@@ -5511,6 +5727,18 @@
       ]
     ],
     "translation": "Host Kan on your own infrastructure. Ideal for organisations that need complete control over their data."
+  },
+  "fTItKK": {
+    "translation": "Hosted MCP Server Endpoint",
+    "message": "Hosted MCP Server Endpoint",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        182
+      ]
+    ]
   },
   "WI4eGo": {
     "message": "How do I get a custom URL?",
@@ -5639,7 +5867,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        75
+        74
       ]
     ],
     "translation": "Ideas to improve this page..."
@@ -5819,7 +6047,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        77
+        84
       ],
       [
         "src/views/home/components/Features.tsx",
@@ -6088,11 +6316,11 @@
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
-        428
+        421
       ],
       [
         "src/views/card/index.tsx",
-        133
+        132
       ]
     ],
     "translation": "Labels"
@@ -6293,7 +6521,7 @@
       ],
       [
         "src/views/board/index.tsx",
-        306
+        302
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -6321,7 +6549,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        124
+        123
       ]
     ],
     "translation": "List"
@@ -6465,10 +6693,22 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        94
+        93
       ]
     ],
     "translation": "Make template"
+  },
+  "XuPiN2": {
+    "translation": "Manage API keys →",
+    "message": "Manage API keys →",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        241
+      ]
+    ]
   },
   "hB02vO": {
     "message": "Manage members",
@@ -6525,6 +6765,42 @@
       ]
     ],
     "translation": "Marketing"
+  },
+  "nA8kxD": {
+    "translation": "MCP",
+    "message": "MCP",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/components/SettingsLayout.tsx",
+        72
+      ]
+    ]
+  },
+  "xEGvP3": {
+    "translation": "MCP endpoint copied to clipboard",
+    "message": "MCP endpoint copied to clipboard",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        71
+      ]
+    ]
+  },
+  "BsWJj/": {
+    "translation": "MCP requests require a Kan API key provided as an Authorization Bearer header.",
+    "message": "MCP requests require a Kan API key provided as an Authorization Bearer header.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        224
+      ]
+    ]
   },
   "agPptk": {
     "message": "Medium",
@@ -6601,7 +6877,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        121
+        117
       ],
       [
         "src/views/board/components/Filters.tsx",
@@ -6609,11 +6885,11 @@
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
-        386
+        379
       ],
       [
         "src/views/card/index.tsx",
-        143
+        142
       ],
       [
         "src/views/members/index.tsx",
@@ -6653,6 +6929,18 @@
       ]
     ],
     "translation": "Mentions"
+  },
+  "U9MEHn": {
+    "translation": "Model Context Protocol (MCP)",
+    "message": "Model Context Protocol (MCP)",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        166
+      ]
+    ]
   },
   "hty0d5": {
     "message": "Monday",
@@ -6812,7 +7100,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        95
+        94
       ]
     ],
     "translation": "Need help?"
@@ -6856,7 +7144,7 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        147
+        142
       ]
     ],
     "translation": "New API key"
@@ -6868,7 +7156,7 @@
     "origin": [
       [
         "src/views/board/components/NewCardForm.tsx",
-        311
+        304
       ]
     ],
     "translation": "New card"
@@ -7196,6 +7484,22 @@
       ]
     ],
     "translation": "No roles found for this workspace yet."
+  },
+  "KBW5sh": {
+    "translation": "No tools matching \"{toolSearch}\"",
+    "message": "No tools matching \"{toolSearch}\"",
+    "placeholders": {
+      "toolSearch": [
+        "toolSearch"
+      ]
+    },
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        428
+      ]
+    ]
   },
   "TX0bT7": {
     "message": "No webhooks configured. Add a webhook to receive notifications.",
@@ -7620,7 +7924,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        53
+        54
       ]
     ],
     "translation": "Permissions"
@@ -7828,7 +8132,7 @@
       ],
       [
         "src/components/FeedbackModal.tsx",
-        41
+        40
       ],
       [
         "src/components/NewWorkspaceForm.tsx",
@@ -7836,11 +8140,11 @@
       ],
       [
         "src/views/board/components/BoardDropdown.tsx",
-        68
+        67
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
-        193
+        186
       ],
       [
         "src/views/board/components/NewListForm.tsx",
@@ -7864,11 +8168,11 @@
       ],
       [
         "src/views/board/index.tsx",
-        218
+        214
       ],
       [
         "src/views/board/index.tsx",
-        274
+        270
       ],
       [
         "src/views/boards/components/ImportBoardsForm.tsx",
@@ -7884,11 +8188,11 @@
       ],
       [
         "src/views/card/components/ChecklistItemRow.tsx",
-        67
+        66
       ],
       [
         "src/views/card/components/ChecklistItemRow.tsx",
-        95
+        94
       ],
       [
         "src/views/card/components/ChecklistNameInput.tsx",
@@ -7944,11 +8248,11 @@
       ],
       [
         "src/views/card/index.tsx",
-        236
+        235
       ],
       [
         "src/views/card/index.tsx",
-        249
+        248
       ],
       [
         "src/views/members/components/DeleteMemberConfirmation.tsx",
@@ -8052,7 +8356,7 @@
       ],
       [
         "src/views/board/index.tsx",
-        315
+        311
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -8356,7 +8660,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        124
+        123
       ]
     ],
     "translation": "Remove from favorites"
@@ -8451,7 +8755,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        57
+        56
       ]
     ],
     "translation": "Removed from favorites"
@@ -8943,7 +9247,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        116
+        115
       ]
     ],
     "translation": "Send feedback"
@@ -9059,11 +9363,11 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        102
+        109
       ],
       [
         "src/components/SideNavigation.tsx",
-        133
+        129
       ]
     ],
     "translation": "Settings"
@@ -9115,6 +9419,18 @@
       ]
     ],
     "translation": "Settings | Integrations"
+  },
+  "Q+G42f": {
+    "translation": "Settings | MCP",
+    "message": "Settings | MCP",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        159
+      ]
+    ]
   },
   "F/FPk/": {
     "message": "Settings | Permissions",
@@ -9451,15 +9767,15 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        225
+        221
       ],
       [
         "src/components/SideNavigation.tsx",
-        226
+        222
       ],
       [
         "src/components/SideNavigation.tsx",
-        236
+        232
       ]
     ],
     "translation": "Start free trial"
@@ -9639,11 +9955,11 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        530
+        526
       ],
       [
         "src/views/board/index.tsx",
-        566
+        562
       ]
     ],
     "translation": "Template"
@@ -9703,7 +10019,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        109
+        105
       ],
       [
         "src/views/home/components/Features.tsx",
@@ -9803,7 +10119,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        34
+        33
       ]
     ],
     "translation": "Thank you for your feedback!"
@@ -9827,7 +10143,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        48
+        47
       ]
     ],
     "translation": "The board has been archived."
@@ -9839,7 +10155,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        49
+        48
       ]
     ],
     "translation": "The board has been unarchived."
@@ -9960,6 +10276,18 @@
     ],
     "translation": "Theme"
   },
+  "WR7SKQ": {
+    "translation": "These canonical tools are registered and available to AI models calling your Kan MCP endpoint.",
+    "message": "These canonical tools are registered and available to AI models calling your Kan MCP endpoint.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        370
+      ]
+    ]
+  },
   "Yf9FAx": {
     "message": "They won't be able to access this workspace.",
     "placeholders": {},
@@ -10007,7 +10335,7 @@
     "origin": [
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
-        129
+        124
       ]
     ],
     "translation": "This API key will only be shown once. Please save it in a secure location."
@@ -10351,7 +10679,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        248
+        247
       ]
     ],
     "translation": "Unable to add label"
@@ -10387,7 +10715,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        313
+        309
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -10411,7 +10739,7 @@
     "origin": [
       [
         "src/views/board/components/NewCardForm.tsx",
-        190
+        183
       ]
     ],
     "translation": "Unable to create card"
@@ -10527,7 +10855,7 @@
     "origin": [
       [
         "src/views/card/components/ChecklistItemRow.tsx",
-        94
+        93
       ]
     ],
     "translation": "Unable to delete checklist item"
@@ -10627,7 +10955,7 @@
     "origin": [
       [
         "src/components/FeedbackModal.tsx",
-        40
+        39
       ]
     ],
     "translation": "Unable to send feedback"
@@ -10667,7 +10995,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        67
+        66
       ]
     ],
     "translation": "Unable to update board"
@@ -10703,11 +11031,11 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        273
+        269
       ],
       [
         "src/views/card/index.tsx",
-        235
+        234
       ]
     ],
     "translation": "Unable to update card"
@@ -10731,7 +11059,7 @@
     "origin": [
       [
         "src/views/card/components/ChecklistItemRow.tsx",
-        66
+        65
       ]
     ],
     "translation": "Unable to update checklist item"
@@ -10779,7 +11107,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        217
+        213
       ],
       [
         "src/views/card/components/ListSelector.tsx",
@@ -10847,7 +11175,7 @@
     "origin": [
       [
         "src/views/board/components/BoardDropdown.tsx",
-        114
+        113
       ]
     ],
     "translation": "Unarchive board"
@@ -11251,7 +11579,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        51
+        50
       ]
     ],
     "translation": "Upload failed"
@@ -11675,7 +12003,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        71
+        78
       ],
       [
         "src/views/settings/WebhookSettings.tsx",
@@ -11763,11 +12091,11 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        47
+        48
       ],
       [
         "src/views/board/index.tsx",
-        530
+        526
       ],
       [
         "src/views/boards/index.tsx",
@@ -12117,6 +12445,18 @@
     ],
     "translation": "You can self-host by following the instructions in our <0>repo</0>."
   },
+  "tyo7E8": {
+    "translation": "You do not have any active API keys. Create one to authenticate your MCP client.",
+    "message": "You do not have any active API keys. Create one to authenticate your MCP client.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/settings/McpSettings.tsx",
+        270
+      ]
+    ]
+  },
   "h2FKMV": {
     "message": "You don't have permission",
     "placeholders": {},
@@ -12337,7 +12677,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        46
+        45
       ]
     ],
     "translation": "Your file has been uploaded successfully."

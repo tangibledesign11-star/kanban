@@ -1,4 +1,4 @@
-import { HiLanguage } from "react-icons/hi2";
+import { Languages } from "lucide-react";
 
 import { useLocalisation } from "~/hooks/useLocalisation";
 import { localeNames } from "~/locales";
@@ -8,7 +8,7 @@ export function LanguageSelector() {
 
   return (
     <div className="relative">
-      <HiLanguage className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+      <Languages className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
       <select
         id="language-select"
         value={locale}

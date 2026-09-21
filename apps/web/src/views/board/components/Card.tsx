@@ -1,10 +1,5 @@
 import { format, isBefore, isSameYear, startOfDay } from "date-fns";
-import { HiOutlinePaperClip } from "react-icons/hi";
-import {
-  HiBars3BottomLeft,
-  HiChatBubbleLeft,
-  HiOutlineClock,
-} from "react-icons/hi2";
+import { AlignLeft, Clock, MessageSquare, Paperclip } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import Avatar from "~/components/Avatar";
@@ -95,7 +90,7 @@ const Card = ({
             <div className="flex items-center gap-2">
               {hasDescription && (
                 <div className="flex items-center gap-1 text-light-700 dark:text-dark-800">
-                  <HiBars3BottomLeft className="h-4 w-4" />
+                  <AlignLeft className="h-4 w-4" />
                 </div>
               )}
               {hasDueDate && dueDate && (
@@ -107,7 +102,7 @@ const Card = ({
                       : "text-light-800 dark:text-dark-800",
                   )}
                 >
-                  <HiOutlineClock className="h-4 w-4" />
+                  <Clock className="h-4 w-4" />
                   <span className="text-[11px]">
                     {format(dueDate, showYear ? "do MMM yyyy" : "do MMM", {
                       locale: dateLocale,
@@ -117,12 +112,12 @@ const Card = ({
               )}
               {comments.length > 0 && (
                 <div className="flex items-center gap-1 text-light-700 dark:text-dark-800">
-                  <HiChatBubbleLeft className="h-4 w-4" />
+                  <MessageSquare className="h-4 w-4" />
                 </div>
               )}
               {hasAttachments && (
                 <div className="flex items-center gap-1 text-light-700 dark:text-dark-800">
-                  <HiOutlinePaperClip className="h-4 w-4" />
+                  <Paperclip className="h-4 w-4" />
                 </div>
               )}
             </div>

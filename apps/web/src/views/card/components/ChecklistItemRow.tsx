@@ -1,8 +1,7 @@
 import type { DraggableProvided } from "react-beautiful-dnd";
 import { t } from "@lingui/core/macro";
 import { useState } from "react";
-import { HiXMark } from "react-icons/hi2";
-import { RiDraggable } from "react-icons/ri";
+import { GripVertical, X } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import PlainTextEditor from "~/components/PlainTextEditor";
@@ -135,7 +134,7 @@ export default function ChecklistItemRow({
           {...dragHandleProps}
           className="absolute left-0 top-1/2 flex h-[20px] w-[20px] -translate-x-full -translate-y-1/2 cursor-grab items-center justify-center pr-1 opacity-0 transition-opacity group-hover:opacity-75 hover:opacity-100 active:cursor-grabbing"
         >
-          <RiDraggable className="h-4 w-4 text-light-700 dark:text-dark-700" />
+          <GripVertical className="h-4 w-4 text-light-700 dark:text-dark-700" />
         </div>
       )}
 
@@ -186,7 +185,7 @@ export default function ChecklistItemRow({
           onClick={handleDelete}
           className="absolute right-1 top-1/2 hidden -translate-y-1/2 rounded-md p-1 text-light-900 group-hover:block hover:bg-light-200 dark:text-dark-700 dark:hover:bg-dark-200"
         >
-          <HiXMark size={16} />
+          <X size={16} />
         </button>
       )}
     </div>

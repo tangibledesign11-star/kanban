@@ -1,5 +1,5 @@
 import { t } from "@lingui/core/macro";
-import { HiXMark } from "react-icons/hi2";
+import { X } from "lucide-react";
 
 import type { Permission } from "@kan/shared";
 import { permissionCategories } from "@kan/shared";
@@ -158,7 +158,7 @@ export function EditMemberPermissionsModal() {
       <div className="px-5 pt-5">
         <div className="mb-3 flex items-start justify-between gap-3">
           <div>
-            <h2 className="mb-1 text-sm font-semibold">
+            <h2 className="mb-1 text-sm font-medium">
               {t`Edit permissions`}
             </h2>
             <p className="min-h-[16px] text-xs text-light-900 dark:text-dark-900">
@@ -171,7 +171,7 @@ export function EditMemberPermissionsModal() {
             className="ml-2 inline-flex h-6 w-6 items-center justify-center rounded-md text-light-900 hover:bg-light-200 focus:outline-none dark:text-dark-900 dark:hover:bg-dark-200"
             aria-label={t`Close`}
           >
-            <HiXMark className="h-3.5 w-3.5" />
+            <X className="h-3.5 w-3.5" />
           </button>
         </div>
 
@@ -190,7 +190,7 @@ export function EditMemberPermissionsModal() {
                     : ""
                 }`}
               >
-                <div className="my-2 text-[12px] font-semibold text-light-900 dark:text-dark-950">
+                <div className="my-2 text-[12px] font-medium text-light-900 dark:text-dark-950">
                   {category.label}
                 </div>
                 <div className="space-y-1.5">

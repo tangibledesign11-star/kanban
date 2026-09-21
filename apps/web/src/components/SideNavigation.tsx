@@ -5,11 +5,7 @@ import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { HiBolt } from "react-icons/hi2";
-import {
-  TbLayoutSidebarLeftCollapse,
-  TbLayoutSidebarLeftExpand,
-} from "react-icons/tb";
+import { PanelLeftClose, PanelLeftOpen, Zap } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import type { Subscription } from "@kan/shared/utils";
@@ -159,7 +155,7 @@ export default function SideNavigation({
           <div className="hidden h-[45px] items-center justify-between pb-3 md:flex">
             {!isCollapsed && (
               <Link href="/" className="block">
-                <h1 className="pl-2 text-[16px] font-bold tracking-tight text-neutral-900 dark:text-dark-1000">
+                <h1 className="pl-2 text-[16px] font-medium tracking-tight text-neutral-900 dark:text-dark-1000">
                   kan.bn
                 </h1>
               </Link>
@@ -172,12 +168,12 @@ export default function SideNavigation({
               )}
             >
               {isCollapsed ? (
-                <TbLayoutSidebarLeftExpand
+                <PanelLeftOpen
                   size={18}
                   className="text-light-900 dark:text-dark-900"
                 />
               ) : (
-                <TbLayoutSidebarLeftCollapse
+                <PanelLeftClose
                   size={18}
                   className="text-light-900 dark:text-dark-900"
                 />
@@ -219,7 +215,7 @@ export default function SideNavigation({
               <div className={twMerge(isCollapsed && "flex justify-center")}>
                 {isCollapsed ? (
                   <ButtonComponent
-                    iconLeft={<HiBolt />}
+                    iconLeft={<Zap className="h-4 w-4" />}
                     variant="secondary"
                     href={`/upgrade/select-plan?plan=pro&workspacePublicId=${workspace.publicId}&returnUrl=${encodeURIComponent("/settings/billing")}`}
                     aria-label={t`Start free trial`}
@@ -228,7 +224,7 @@ export default function SideNavigation({
                   />
                 ) : (
                   <ButtonComponent
-                    iconLeft={<HiBolt />}
+                    iconLeft={<Zap className="h-4 w-4" />}
                     fullWidth
                     variant="secondary"
                     href={`/upgrade/select-plan?plan=pro&workspacePublicId=${workspace.publicId}&returnUrl=${encodeURIComponent("/settings/billing")}`}

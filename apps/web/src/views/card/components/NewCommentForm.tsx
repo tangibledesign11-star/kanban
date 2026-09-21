@@ -1,6 +1,6 @@
 import { t } from "@lingui/core/macro";
 import { useForm } from "react-hook-form";
-import { HiOutlineArrowUp } from "react-icons/hi2";
+import { ArrowUp } from "lucide-react";
 
 import Editor from "~/components/Editor";
 import type { WorkspaceMember } from "~/components/Editor";
@@ -77,7 +77,7 @@ const NewCommentForm = ({
           {addCommentMutation.isPending ? (
             <LoadingSpinner size="sm" />
           ) : (
-            <HiOutlineArrowUp />
+            <ArrowUp className="h-4 w-4" />
           )}
         </button>
       </div>

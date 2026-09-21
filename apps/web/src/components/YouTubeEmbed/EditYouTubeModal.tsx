@@ -1,7 +1,7 @@
 import { t } from "@lingui/core/macro";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { HiXMark } from "react-icons/hi2";
+import { X } from "lucide-react";
 
 import Button from "~/components/Button";
 import Input from "~/components/Input";
@@ -114,7 +114,7 @@ export function EditYouTubeModal() {
               closeModal();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
 

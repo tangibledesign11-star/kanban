@@ -6,7 +6,7 @@ import {
 } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
-import { HiMiniMinusSmall, HiMiniPlusSmall } from "react-icons/hi2";
+import { Minus, Plus } from "lucide-react";
 
 const Text = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -143,7 +143,7 @@ const Faqs = () => {
           <p>{t`FAQs`}</p>
         </div>
 
-        <p className="mt-2 text-center text-3xl font-bold text-light-1000 dark:text-dark-1000 lg:text-4xl">
+        <p className="mt-2 text-center text-3xl font-medium text-light-1000 dark:text-dark-1000 lg:text-4xl">
           {t`Questions?`}
         </p>
         <p className="text lg:text-md mt-3 max-w-[500px] text-center text-light-950 dark:text-dark-900">
@@ -169,15 +169,15 @@ const Faqs = () => {
                 >
                   <dt>
                     <DisclosureButton className="group flex w-full items-center justify-between text-left text-light-1000 dark:text-dark-1000">
-                      <span className="text-[14px] font-semibold">
+                      <span className="text-[14px] font-medium">
                         {faq.question}
                       </span>
                       <span className="ml-6 flex h-7 items-center text-light-800 dark:text-dark-800">
-                        <HiMiniPlusSmall
+                        <Plus
                           aria-hidden="true"
                           className="size-6 group-data-[open]:hidden"
                         />
-                        <HiMiniMinusSmall
+                        <Minus
                           aria-hidden="true"
                           className="size-6 group-[&:not([data-open])]:hidden"
                         />

@@ -16,7 +16,7 @@ export function CardContextDueDateModal() {
 
   return (
     <div className="p-4">
-      <h2 className="mb-4 text-lg font-semibold text-light-1000 dark:text-dark-1000">
+      <h2 className="mb-4 text-lg font-medium text-light-1000 dark:text-dark-1000">
         {t`Set due date`}
       </h2>
       {isLoading ? (

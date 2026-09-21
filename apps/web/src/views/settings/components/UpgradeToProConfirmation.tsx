@@ -1,5 +1,5 @@
 import { t } from "@lingui/core/macro";
-import { HiBolt, HiCheckBadge } from "react-icons/hi2";
+import { BadgeCheck, Zap } from "lucide-react";
 
 import Button from "~/components/Button";
 import { useModal } from "~/providers/modal";
@@ -51,7 +51,7 @@ export function UpgradeToProConfirmation({
     <div className="p-5">
       <div className="flex w-full flex-col justify-between pb-4">
         <div className="pb-4">
-          <h2 className="text-md font-bold text-neutral-900 dark:text-dark-1000">
+          <h2 className="text-md font-medium text-neutral-900 dark:text-dark-1000">
             {t`Upgrade to Pro`}
           </h2>
         </div>
@@ -62,7 +62,7 @@ export function UpgradeToProConfirmation({
         <div className="rounded-md bg-light-100 p-3 text-xs text-light-900 dark:bg-dark-200 dark:text-dark-900">
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
-              <HiCheckBadge className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
+              <BadgeCheck className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
               <div className="flex items-center space-x-2">
                 <span className="text-sm text-neutral-900 dark:text-dark-1000">
                   {t`Unlimited members`}
@@ -73,13 +73,13 @@ export function UpgradeToProConfirmation({
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <HiCheckBadge className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
+              <BadgeCheck className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
               <span className="text-sm text-neutral-900 dark:text-dark-1000">
                 {t`Custom workspace URL`}
               </span>
             </div>
             <div className="flex items-center space-x-3">
-              <HiCheckBadge className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
+              <BadgeCheck className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
               <div className="flex items-center space-x-2">
                 <span className="text-xs text-neutral-900 dark:text-dark-1000">
                   {t`Board analytics`}
@@ -90,7 +90,7 @@ export function UpgradeToProConfirmation({
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <HiCheckBadge className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
+              <BadgeCheck className="h-5 w-5 flex-shrink-0 text-light-1000 dark:text-dark-950" />
               <span className="text-sm text-neutral-900 dark:text-dark-1000">
                 {t`Priority email support`}
               </span>
@@ -109,7 +109,7 @@ export function UpgradeToProConfirmation({
         </Button>
         <Button
           onClick={handleUpgrade}
-          iconRight={<HiBolt />}
+          iconRight={<Zap className="h-4 w-4" />}
         >{t`Start 14 day free trial`}</Button>
       </div>
     </div>

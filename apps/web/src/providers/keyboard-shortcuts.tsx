@@ -16,7 +16,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { HiXMark } from "react-icons/hi2";
+import { X } from "lucide-react";
 
 import { env } from "~/env";
 import { useEventListener } from "~/hooks/useEventListener";
@@ -317,14 +317,14 @@ export function KeyboardShortcutProvider({
             className="relative w-full max-w-sm transform overflow-hidden rounded-lg border border-light-600 bg-white shadow-3xl-light dark:border-dark-600 dark:bg-dark-100 dark:shadow-3xl-dark"
           >
             <div className="flex items-center justify-between border-b border-light-300 px-6 py-4 dark:border-dark-300">
-              <DialogTitle className="text-[14px] font-semibold text-neutral-900 dark:text-dark-1000">
+              <DialogTitle className="text-[14px] font-medium text-neutral-900 dark:text-dark-1000">
                 {t`Keyboard Shortcuts`}
               </DialogTitle>
               <button
                 onClick={() => setIsLegendOpen(false)}
                 className="rounded p-1 hover:bg-light-200 dark:hover:bg-dark-200"
               >
-                <HiXMark className="h-5 w-5 text-neutral-700 dark:text-dark-700" />
+                <X className="h-5 w-5 text-neutral-700 dark:text-dark-700" />
               </button>
             </div>
 
@@ -341,7 +341,7 @@ export function KeyboardShortcutProvider({
                     const groupInfo = getShortcutGroupInfo();
                     return (
                       <div key={`${group}-${idx}`}>
-                        <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-light-1000 dark:text-dark-1000">
+                        <h3 className="mb-3 text-xs font-medium uppercase tracking-wide text-light-1000 dark:text-dark-1000">
                           {groupInfo[group].label}
                         </h3>
                         <div className="flex flex-col gap-y-2">
@@ -445,7 +445,7 @@ function ShortcutListItem({ shortcut }: { shortcut: KeyboardShortcut }) {
 
 function FormattedShortcut({ shortcut }: { shortcut: KeyboardShortcut }) {
   const kbdClassName =
-    "inline-flex h-5 w-5 items-center justify-center rounded border border-light-400 bg-light-200 px-1.5 py-0.5 font-mono text-[8px] font-semibold text-center text-neutral-900 dark:border-dark-400 dark:bg-dark-200 dark:text-dark-950";
+    "inline-flex h-5 w-5 items-center justify-center rounded border border-light-400 bg-light-200 px-1.5 py-0.5 font-mono text-[8px] font-medium text-center text-neutral-900 dark:border-dark-400 dark:bg-dark-200 dark:text-dark-950";
 
   const stringifyModifier = (modifier: ModifierKey): string => {
     const isMac =

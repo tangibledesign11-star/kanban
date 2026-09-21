@@ -10,7 +10,7 @@ import {
 } from "@headlessui/react";
 import { t } from "@lingui/macro";
 import { useState } from "react";
-import { HiDocumentText, HiFolder, HiMagnifyingGlass } from "react-icons/hi2";
+import { FileText, Folder, Search } from "lucide-react";
 
 import { useDebounce } from "~/hooks/useDebounce";
 import { useWorkspace } from "~/providers/workspace";
@@ -121,7 +121,7 @@ export default function CommandPallette({
                     }
                   }}
                 />
-                <HiMagnifyingGlass
+                <Search
                   className="pointer-events-none col-start-1 row-start-1 ml-4 size-5 self-center text-light-700 dark:text-dark-700"
                   aria-hidden="true"
                 />
@@ -154,14 +154,14 @@ export default function CommandPallette({
                         <div className="flex items-start gap-3">
                           <div className="mt-0.5 flex-shrink-0">
                             {result.type === "board" ? (
-                              <HiFolder className="h-4 w-4 text-light-600 dark:text-dark-600" />
+                              <Folder className="h-4 w-4 text-light-600 dark:text-dark-600" />
                             ) : (
-                              <HiDocumentText className="h-4 w-4 text-light-600 dark:text-dark-600" />
+                              <FileText className="h-4 w-4 text-light-600 dark:text-dark-600" />
                             )}
                           </div>
                           <div className="min-w-0 flex-1 text-left">
                             <div className="flex items-center gap-2">
-                              <div className="truncate text-sm font-bold text-light-900 dark:text-dark-900">
+                              <div className="truncate text-sm font-medium text-light-900 dark:text-dark-900">
                                 {result.title}
                               </div>
                               {result.type === "card" &&

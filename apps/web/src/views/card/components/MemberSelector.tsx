@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { t } from "@lingui/core/macro";
-import { HiMiniPlus } from "react-icons/hi2";
+import { Plus } from "lucide-react";
 
 import Avatar from "~/components/Avatar";
 import CheckboxDropdown from "~/components/CheckboxDropdown";
@@ -131,7 +131,7 @@ export default function MemberSelector({
               </div>
             ) : (
               <>
-                <HiMiniPlus size={22} className="pr-2" />
+                <Plus size={22} className="pr-2" />
                 {t`Add member`}
               </>
             )}

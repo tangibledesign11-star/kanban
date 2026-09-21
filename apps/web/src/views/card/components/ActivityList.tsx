@@ -4,18 +4,18 @@ import { Trans } from "@lingui/react/macro";
 import { format, formatDistanceToNow, isSameYear } from "date-fns";
 import { useEffect, useRef, useState } from "react";
 import {
-  HiOutlineArrowLeft,
-  HiOutlineArrowRight,
-  HiOutlineCheckCircle,
-  HiOutlineClock,
-  HiOutlinePaperClip,
-  HiOutlinePencil,
-  HiOutlinePlus,
-  HiOutlineTag,
-  HiOutlineTrash,
-  HiOutlineUserMinus,
-  HiOutlineUserPlus,
-} from "react-icons/hi2";
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  Paperclip,
+  Pencil,
+  Plus,
+  Tag,
+  Trash2,
+  UserMinus,
+  UserPlus,
+} from "lucide-react";
 
 import type {
   GetCardActivitiesOutput,
@@ -329,26 +329,26 @@ const getActivityText = ({
 
 const ACTIVITY_ICON_MAP: Partial<Record<ActivityType, React.ReactNode | null>> =
   {
-    "card.created": <HiOutlinePlus />,
-    "card.updated.title": <HiOutlinePencil />,
-    "card.updated.description": <HiOutlinePencil />,
-    "card.updated.label.added": <HiOutlineTag />,
-    "card.updated.label.removed": <HiOutlineTag />,
-    "card.updated.member.added": <HiOutlineUserPlus />,
-    "card.updated.member.removed": <HiOutlineUserMinus />,
-    "card.updated.checklist.added": <HiOutlinePlus />,
-    "card.updated.checklist.renamed": <HiOutlinePencil />,
-    "card.updated.checklist.deleted": <HiOutlineTrash />,
-    "card.updated.checklist.item.added": <HiOutlinePlus />,
-    "card.updated.checklist.item.updated": <HiOutlinePencil />,
-    "card.updated.checklist.item.completed": <HiOutlineCheckCircle />,
-    "card.updated.checklist.item.uncompleted": <HiOutlineCheckCircle />,
-    "card.updated.checklist.item.deleted": <HiOutlineTrash />,
-    "card.updated.attachment.added": <HiOutlinePaperClip />,
-    "card.updated.attachment.removed": <HiOutlinePaperClip />,
-    "card.updated.dueDate.added": <HiOutlineClock />,
-    "card.updated.dueDate.updated": <HiOutlineClock />,
-    "card.updated.dueDate.removed": <HiOutlineClock />,
+    "card.created": <Plus />,
+    "card.updated.title": <Pencil />,
+    "card.updated.description": <Pencil />,
+    "card.updated.label.added": <Tag />,
+    "card.updated.label.removed": <Tag />,
+    "card.updated.member.added": <UserPlus />,
+    "card.updated.member.removed": <UserMinus />,
+    "card.updated.checklist.added": <Plus />,
+    "card.updated.checklist.renamed": <Pencil />,
+    "card.updated.checklist.deleted": <Trash2 />,
+    "card.updated.checklist.item.added": <Plus />,
+    "card.updated.checklist.item.updated": <Pencil />,
+    "card.updated.checklist.item.completed": <CheckCircle2 />,
+    "card.updated.checklist.item.uncompleted": <CheckCircle2 />,
+    "card.updated.checklist.item.deleted": <Trash2 />,
+    "card.updated.attachment.added": <Paperclip />,
+    "card.updated.attachment.removed": <Paperclip />,
+    "card.updated.dueDate.added": <Clock />,
+    "card.updated.dueDate.updated": <Clock />,
+    "card.updated.dueDate.removed": <Clock />,
   } as const;
 
 const getActivityIcon = (
@@ -358,9 +358,9 @@ const getActivityIcon = (
 ): React.ReactNode | null => {
   if (type === "card.updated.list" && fromIndex != null && toIndex != null) {
     return fromIndex > toIndex ? (
-      <HiOutlineArrowLeft />
+      <ArrowLeft />
     ) : (
-      <HiOutlineArrowRight />
+      <ArrowRight />
     );
   }
   return ACTIVITY_ICON_MAP[type] ?? null;

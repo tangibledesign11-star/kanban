@@ -40,7 +40,7 @@ export default function PricingView() {
               <p>{t`Pricing`}</p>
             </div>
 
-            <p className="mt-4 text-center text-3xl font-bold text-light-1000 dark:text-dark-1000 lg:text-5xl">
+            <p className="mt-4 text-center text-3xl font-medium text-light-1000 dark:text-dark-1000 lg:text-5xl">
               {t`Simple pricing`}
             </p>
             <p className="text:md lg:text-md mt-6 max-w-[300px] text-center text-light-950 dark:text-dark-900">

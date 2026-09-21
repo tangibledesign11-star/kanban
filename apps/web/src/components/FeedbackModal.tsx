@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { t } from "@lingui/core/macro";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { HiXMark } from "react-icons/hi2";
+import { X } from "lucide-react";
 
 import Button from "~/components/Button";
 import Input from "~/components/Input";
@@ -55,7 +54,7 @@ export default function FeedbackModal() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="px-5 pt-5">
         <div className="flex w-full items-center justify-between pb-4">
-          <h2 className="text-sm font-bold text-neutral-900 dark:text-dark-1000">
+          <h2 className="text-sm font-medium text-neutral-900 dark:text-dark-1000">
             {t`Feedback`}
           </h2>
           <button
@@ -66,7 +65,7 @@ export default function FeedbackModal() {
               closeModal();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
 

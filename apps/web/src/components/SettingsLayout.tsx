@@ -10,14 +10,15 @@ import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
 import { useEffect, useState } from "react";
 import {
-  HiChevronDown,
-  HiOutlineBanknotes,
-  HiOutlineBolt,
-  HiOutlineCodeBracketSquare,
-  HiOutlineRectangleGroup,
-  HiOutlineShieldCheck,
-  HiOutlineUser,
-} from "react-icons/hi2";
+  Banknote,
+  ChevronDown,
+  Code2,
+  Cpu,
+  LayoutGrid,
+  ShieldCheck,
+  User,
+  Zap,
+} from "lucide-react";
 import { usePermissions } from "~/hooks/usePermissions";
 import { useWorkspace } from "~/providers/workspace";
 
@@ -37,43 +38,49 @@ export function SettingsLayout({ children, currentTab }: SettingsLayoutProps) {
   const settingsTabs = [
     {
       key: "account",
-      icon: <HiOutlineUser />,
+      icon: <User className="h-4 w-4" />,
       label: t`Account`,
       condition: true,
     },
     {
       key: "workspace",
-      icon: <HiOutlineRectangleGroup />,
+      icon: <LayoutGrid className="h-4 w-4" />,
       label: t`Workspace`,
       condition: canViewWorkspace,
     },
     {
       key: "permissions",
-      icon: <HiOutlineShieldCheck />,
+      icon: <ShieldCheck className="h-4 w-4" />,
       label: t`Permissions`,
       condition: isAdmin,
     },
     {
       key: "billing",
       label: t`Billing`,
-      icon: <HiOutlineBanknotes />,
+      icon: <Banknote className="h-4 w-4" />,
       condition: env("NEXT_PUBLIC_KAN_ENV") === "cloud" && isAdmin,
     },
     {
       key: "api",
-      icon: <HiOutlineCodeBracketSquare />,
+      icon: <Code2 className="h-4 w-4" />,
       label: t`API`,
       condition: true,
     },
     {
+      key: "mcp",
+      icon: <Cpu className="h-4 w-4" />,
+      label: t`MCP`,
+      condition: true,
+    },
+    {
       key: "webhooks",
-      icon: <HiOutlineBolt />,
+      icon: <Zap className="h-4 w-4" />,
       label: t`Webhooks`,
       condition: isAdmin,
     },
     {
       key: "integrations",
-      icon: <HiOutlineCodeBracketSquare />,
+      icon: <Code2 className="h-4 w-4" />,
       label: t`Integrations`,
       condition: canEditWorkspace,
     },
@@ -98,7 +105,7 @@ export function SettingsLayout({ children, currentTab }: SettingsLayoutProps) {
       <div className="h-full max-h-[calc(100vdh-3rem)] overflow-y-auto md:max-h-[calc(100vdh-4rem)]">
         <div className="m-auto max-w-[1100px] px-5 py-6 md:px-28 md:py-12">
           <div className="mb-8 flex w-full justify-between">
-            <h1 className="font-bold tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
+            <h1 className="font-medium tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
               {t`Settings`}
             </h1>
           </div>
@@ -118,7 +125,7 @@ export function SettingsLayout({ children, currentTab }: SettingsLayoutProps) {
                 <div className="relative mb-4">
                   <ListboxButton className="w-full appearance-none rounded-lg border-0 bg-light-50 py-2 pl-3 pr-10 text-left text-sm text-light-1000 shadow-sm ring-1 ring-inset ring-light-300 focus:ring-2 focus:ring-inset focus:ring-light-400 dark:bg-dark-50 dark:text-dark-1000 dark:ring-dark-300 dark:focus:ring-dark-500">
                     {availableTabs[selectedTabIndex]?.label ?? "Select a tab"}
-                    <HiChevronDown
+                    <ChevronDown
                       aria-hidden="true"
                       className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-light-900 dark:text-dark-900"
                     />

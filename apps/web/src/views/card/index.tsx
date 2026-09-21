@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 import { t } from "@lingui/core/macro";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { HiXMark } from "react-icons/hi2";
-import { IoChevronForwardSharp } from "react-icons/io5";
+import { ChevronRight, X } from "lucide-react";
 
 import { authClient } from "@kan/auth/client";
 
@@ -332,14 +331,14 @@ export default function CardPage({ isTemplate }: { isTemplate?: boolean }) {
             <>
               <div className="flex items-center gap-1">
                 <Link
-                  className="whitespace-nowrapleading-[1.5rem] text-sm font-bold text-light-900 dark:text-dark-950"
+                  className="whitespace-nowrapleading-[1.5rem] text-sm font-medium text-light-900 dark:text-dark-950"
                   href={`${isTemplate ? "/templates" : "/boards"}`}
                 >
                   {workspace.name}
                 </Link>
-                <IoChevronForwardSharp className="h-[10px] w-[10px] text-light-900 dark:text-dark-900" />
+                <ChevronRight className="h-[10px] w-[10px] text-light-900 dark:text-dark-900" />
                 <Link
-                  className="whitespace-nowrap text-sm font-bold leading-[1.5rem] text-light-900 dark:text-dark-950"
+                  className="whitespace-nowrap text-sm font-medium leading-[1.5rem] text-light-900 dark:text-dark-950"
                   href={`${isTemplate ? "/templates" : "/boards"}/${board?.publicId}`}
                 >
                   {board?.name}
@@ -347,8 +346,8 @@ export default function CardPage({ isTemplate }: { isTemplate?: boolean }) {
                 {card.cardNumber != null &&
                   card.list.board.workspace.cardPrefix && (
                     <>
-                      <IoChevronForwardSharp className="h-[10px] w-[10px] text-light-900 dark:text-dark-900" />
-                      <span className="whitespace-nowrap text-sm font-bold leading-[1.5rem] text-light-700 dark:text-dark-800">
+                      <ChevronRight className="h-[10px] w-[10px] text-light-900 dark:text-dark-900" />
+                      <span className="whitespace-nowrap text-sm font-medium leading-[1.5rem] text-light-700 dark:text-dark-800">
                         {card.list.board.workspace.cardPrefix}-{card.cardNumber}
                       </span>
                     </>
@@ -374,13 +373,13 @@ export default function CardPage({ isTemplate }: { isTemplate?: boolean }) {
                   className="flex h-7 w-7 items-center justify-center rounded-[5px] text-light-900 hover:bg-light-200 dark:text-dark-900 dark:hover:bg-dark-200"
                   aria-label={t`Close`}
                 >
-                  <HiXMark className="h-4 w-4" />
+                  <X className="h-4 w-4" />
                 </Link>
               </div>
             </>
           )}
           {!card && !isLoading && (
-            <p className="block p-0 py-0 font-bold leading-[1.5rem] tracking-tight text-light-900 dark:text-dark-900 sm:text-[1rem]">
+            <p className="block p-0 py-0 font-medium leading-[1.5rem] tracking-tight text-light-900 dark:text-dark-900 sm:text-[1rem]">
               {t`Card not found`}
             </p>
           )}
@@ -406,7 +405,7 @@ export default function CardPage({ isTemplate }: { isTemplate?: boolean }) {
                         onBlur={canEdit ? handleSubmit(onSubmit) : undefined}
                         rows={1}
                         disabled={!canEdit}
-                        className={`block w-full resize-none overflow-hidden border-0 bg-transparent p-0 py-0 font-bold leading-relaxed text-neutral-900 focus:ring-0 dark:text-dark-1000 sm:text-[1.2rem] ${!canEdit ? "cursor-default" : ""}`}
+                        className={`block w-full resize-none overflow-hidden border-0 bg-transparent p-0 py-0 font-medium leading-relaxed text-neutral-900 focus:ring-0 dark:text-dark-1000 sm:text-[1.2rem] ${!canEdit ? "cursor-default" : ""}`}
                         onInput={(e) => {
                           const target = e.target as HTMLTextAreaElement;
                           target.style.height = "auto";
@@ -417,7 +416,7 @@ export default function CardPage({ isTemplate }: { isTemplate?: boolean }) {
                   </form>
                 )}
                 {!card && !isLoading && (
-                  <p className="block p-0 py-0 font-bold leading-[2.3rem] tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
+                  <p className="block p-0 py-0 font-medium leading-[2.3rem] tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
                     {t`Card not found`}
                   </p>
                 )}

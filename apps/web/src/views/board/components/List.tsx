@@ -3,11 +3,11 @@ import { t } from "@lingui/core/macro";
 import { Draggable } from "react-beautiful-dnd";
 import { useForm } from "react-hook-form";
 import {
-  HiEllipsisHorizontal,
-  HiOutlinePlusSmall,
-  HiOutlineSquaresPlus,
-  HiOutlineTrash,
-} from "react-icons/hi2";
+  MoreHorizontal,
+  Plus,
+  SquarePlus,
+  Trash2,
+} from "lucide-react";
 
 import { authClient } from "@kan/auth/client";
 
@@ -118,11 +118,11 @@ export default function List({
                 }
               >
                 <button
-                  className="mx-1 inline-flex h-fit items-center rounded-md p-1 px-1 text-sm font-semibold text-dark-50 hover:bg-light-400 disabled:cursor-not-allowed disabled:opacity-60 dark:hover:bg-dark-200"
+                  className="mx-1 inline-flex h-fit items-center rounded-md p-1 px-1 text-sm font-medium text-dark-50 hover:bg-light-400 disabled:cursor-not-allowed disabled:opacity-60 dark:hover:bg-dark-200"
                   onClick={() => openNewCardForm(list.publicId)}
                   disabled={!canCreateCard}
                 >
-                  <HiOutlinePlusSmall
+                  <Plus
                     className="h-5 w-5 text-dark-900"
                     aria-hidden="true"
                   />
@@ -136,7 +136,7 @@ export default function List({
                           label: t`Add a card`,
                           action: () => openNewCardForm(list.publicId),
                           icon: (
-                            <HiOutlineSquaresPlus className="h-[18px] w-[18px] text-dark-900" />
+                            <SquarePlus className="h-[18px] w-[18px] text-dark-900" />
                           ),
                         },
                       ]
@@ -147,7 +147,7 @@ export default function List({
                           label: t`Delete list`,
                           action: handleOpenDeleteListConfirmation,
                           icon: (
-                            <HiOutlineTrash className="h-[18px] w-[18px] text-dark-900" />
+                            <Trash2 className="h-[18px] w-[18px] text-dark-900" />
                           ),
                         },
                       ]
@@ -161,7 +161,7 @@ export default function List({
                 return (
                   <div className="relative mr-1 inline-block">
                     <Dropdown items={dropdownItems}>
-                      <HiEllipsisHorizontal className="h-5 w-5 text-dark-900" />
+                      <MoreHorizontal className="h-5 w-5 text-dark-900" />
                     </Dropdown>
                   </div>
                 );

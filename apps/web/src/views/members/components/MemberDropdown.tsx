@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { HiEllipsisVertical } from "react-icons/hi2";
+import { MoreVertical } from "lucide-react";
 
 export default function MemberDropdown() {
   return (
@@ -11,7 +11,7 @@ export default function MemberDropdown() {
           className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent text-dark-900 focus:outline-none "
         >
           <span className="sr-only">Open options</span>
-          <HiEllipsisVertical className="h-5 w-5" aria-hidden="true" />
+          <MoreVertical className="h-5 w-5" aria-hidden="true" />
         </Menu.Button>
       </div>
 

@@ -11,7 +11,7 @@ import {
   subMonths,
 } from "date-fns";
 import { useMemo, useState } from "react";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 interface DateSelectorProps {
@@ -87,9 +87,9 @@ const DateSelector = ({
           className="flex flex-none items-center justify-center p-1.5 text-light-700 hover:text-light-900 dark:text-dark-700 dark:hover:text-dark-1000"
         >
           <span className="sr-only">Previous month</span>
-          <HiChevronLeft aria-hidden="true" className="h-4 w-4" />
+          <ChevronLeft aria-hidden="true" className="h-4 w-4" />
         </button>
-        <div className="flex-1 text-center text-sm font-semibold">
+        <div className="flex-1 text-center text-sm font-medium">
           {monthName} {year}
         </div>
         <button
@@ -98,7 +98,7 @@ const DateSelector = ({
           className="flex flex-none items-center justify-center p-1.5 text-light-700 hover:text-light-900 dark:text-dark-700 dark:hover:text-dark-1000"
         >
           <span className="sr-only">Next month</span>
-          <HiChevronRight aria-hidden="true" className="h-4 w-4" />
+          <ChevronRight aria-hidden="true" className="h-4 w-4" />
         </button>
       </div>
       <div className="mt-6 grid grid-cols-7 text-center text-xs/6 text-light-950 dark:text-dark-950">

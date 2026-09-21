@@ -5,7 +5,7 @@ import Layout from "../home/components/Layout";
 
 export default function PrivacyView() {
   const SubHeading = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="mb-4 text-2xl font-bold text-light-1000 dark:text-dark-950">
+    <h3 className="mb-4 text-2xl font-medium text-light-1000 dark:text-dark-950">
       {children}
     </h3>
   );
@@ -33,7 +33,7 @@ export default function PrivacyView() {
       <PageHead title="Privacy Policy | kan.bn" />
       <div className="flex flex-col items-center">
         <div className="mb-20 flex h-full w-full max-w-[800px] flex-col lg:pt-[5rem]">
-          <div className="flex items-center justify-center py-36 text-4xl font-bold tracking-tight text-light-1000 dark:text-dark-1000">
+          <div className="flex items-center justify-center py-36 text-4xl font-medium tracking-tight text-light-1000 dark:text-dark-1000">
             <h2>Privacy Policy</h2>
           </div>
           <p className="mb-6 text-sm text-light-1000 dark:text-dark-900">

@@ -51,7 +51,7 @@ export default function NewApiKeyForm() {
         onSubmit={form.handleSubmit(handleSubmit)}
         className="flex flex-col gap-2"
       >
-        <h2 className="text-sm font-bold text-neutral-900 dark:text-dark-1000">
+        <h2 className="text-sm font-medium text-neutral-900 dark:text-dark-1000">
           New API key
         </h2>
         <Input

@@ -1,6 +1,6 @@
 import { t } from "@lingui/core/macro";
 import { useEffect, useRef, useState } from "react";
-import { HiCheckCircle } from "react-icons/hi2";
+import { CheckCircle2 } from "lucide-react";
 
 export interface Template {
   id: string;
@@ -188,7 +188,7 @@ export default function TemplateBoards({
               </div>
               {currentBoard?.id === template.id && (
                 <div className="absolute right-3 top-3 text-light-1000 dark:text-dark-1000">
-                  <HiCheckCircle className="h-5 w-5" />
+                  <CheckCircle2 className="h-5 w-5" />
                 </div>
               )}
             </label>

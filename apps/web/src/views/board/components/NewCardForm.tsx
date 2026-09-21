@@ -3,11 +3,7 @@ import { Trans } from "@lingui/react/macro";
 import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import {
-  HiOutlineBarsArrowDown,
-  HiOutlineBarsArrowUp,
-  HiXMark,
-} from "react-icons/hi2";
+import { ArrowDownToLine, ArrowUpToLine, X } from "lucide-react";
 
 import type { NewCardInput } from "@kan/api/types";
 import { generateUID } from "@kan/shared/utils";
@@ -162,9 +158,6 @@ export function NewCardForm({
                     ...member,
                     deletedAt: null,
                   })) ?? [],
-              comments: [],
-              checklists: [],
-              attachments: [],
               _filteredLabels: labelPublicIds.map((id) => ({ publicId: id })),
               _filteredMembers: memberPublicIds.map((id) => ({ publicId: id })),
               index: position === "start" ? 0 : list.cards.length,
@@ -307,7 +300,7 @@ export function NewCardForm({
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="px-5 pt-5">
         <div className="flex w-full items-center justify-between pb-5">
-          <h2 className="text-sm font-bold text-neutral-900 dark:text-dark-1000">
+          <h2 className="text-sm font-medium text-neutral-900 dark:text-dark-1000">
             {t`New card`}
           </h2>
           <button
@@ -318,7 +311,7 @@ export function NewCardForm({
               e.preventDefault();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
 
@@ -514,9 +507,9 @@ export function NewCardForm({
             className="flex h-auto items-center rounded-[5px] border-[1px] border-light-600 bg-light-200 px-1.5 py-1 text-left text-xs text-light-800 hover:bg-light-300 focus-visible:outline-none dark:border-dark-600 dark:bg-dark-400 dark:text-dark-1000 dark:hover:bg-dark-500"
           >
             {position === "start" ? (
-              <HiOutlineBarsArrowUp size={14} />
+              <ArrowUpToLine size={14} />
             ) : (
-              <HiOutlineBarsArrowDown size={14} />
+              <ArrowDownToLine size={14} />
             )}
           </button>
         </div>

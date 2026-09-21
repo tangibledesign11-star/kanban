@@ -1,7 +1,7 @@
 import { t } from "@lingui/core/macro";
 import { format } from "date-fns";
 import { useEffect, useState } from "react";
-import { HiMiniPlus } from "react-icons/hi2";
+import { Plus } from "lucide-react";
 
 import DateSelector from "~/components/DateSelector";
 import { usePopup } from "~/providers/popup";
@@ -117,7 +117,7 @@ export function DueDateSelector({
           <span>{format(dueDate, "MMM d, yyyy")}</span>
         ) : (
           <>
-            <HiMiniPlus size={22} className="pr-2" />
+            <Plus size={22} className="pr-2" />
             {t`Set due date`}
           </>
         )}

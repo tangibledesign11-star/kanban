@@ -1,6 +1,6 @@
 import { t } from "@lingui/core/macro";
 import { useEffect, useState } from "react";
-import { HiOutlineEye, HiOutlineEyeSlash } from "react-icons/hi2";
+import { Eye, EyeOff } from "lucide-react";
 
 import Button from "~/components/Button";
 import CheckboxDropdown from "~/components/CheckboxDropdown";
@@ -97,7 +97,7 @@ const VisibilityButton = ({
         >
           <Button
             variant="secondary"
-            iconLeft={isPublic ? <HiOutlineEye /> : <HiOutlineEyeSlash />}
+            iconLeft={isPublic ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
             disabled={isLoading || !canEdit}
           >
             {t`Visibility`}

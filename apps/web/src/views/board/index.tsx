@@ -8,11 +8,7 @@ import { env } from "next-runtime-env";
 import { useEffect, useState } from "react";
 import { DragDropContext, Draggable } from "react-beautiful-dnd";
 import { useForm } from "react-hook-form";
-import {
-  HiOutlinePlusSmall,
-  HiOutlineRectangleStack,
-  HiOutlineSquare3Stack3D,
-} from "react-icons/hi2";
+import { Layers, Plus } from "lucide-react";
 
 import type { UpdateBoardInput } from "@kan/api/types";
 
@@ -548,20 +544,20 @@ export default function BoardPage({ isTemplate }: { isTemplate?: boolean }) {
                 {...register("name")}
                 onBlur={canEditBoard ? handleSubmit(onSubmit) : undefined}
                 readOnly={!canEditBoard}
-                className="block border-0 bg-transparent p-0 py-0 font-bold leading-[2.3rem] tracking-tight text-neutral-900 focus:ring-0 focus-visible:outline-none disabled:cursor-not-allowed dark:text-dark-1000 sm:text-[1.2rem]"
+                className="block border-0 bg-transparent p-0 py-0 font-medium leading-[2.3rem] tracking-tight text-neutral-900 focus:ring-0 focus-visible:outline-none disabled:cursor-not-allowed dark:text-dark-1000 sm:text-[1.2rem]"
               />
             </form>
           )}
           {!boardData && !isLoading && (
-            <p className="order-2 block p-0 py-0 font-bold leading-[2.3rem] tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem] md:order-1">
+            <p className="order-2 block p-0 py-0 font-medium leading-[2.3rem] tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem] md:order-1">
               {t`${isTemplate ? "Template" : "Board"} not found`}
             </p>
           )}
           <div className="order-1 mb-4 flex items-center justify-end space-x-2 md:order-2 md:mb-0">
             {isTemplate && (
-              <div className="inline-flex cursor-default items-center justify-center whitespace-nowrap rounded-md border-[1px] border-light-300 bg-light-50 px-3 py-2 text-sm font-semibold text-light-950 shadow-sm dark:border-dark-300 dark:bg-dark-50 dark:text-dark-950">
+              <div className="inline-flex cursor-default items-center justify-center whitespace-nowrap rounded-md border-[1px] border-light-300 bg-light-50 px-3 py-2 text-sm font-medium text-light-950 shadow-sm dark:border-dark-300 dark:bg-dark-50 dark:text-dark-950">
                 <span className="mr-2">
-                  <HiOutlineRectangleStack />
+                  <Layers className="h-4 w-4" />
                 </span>
                 {t`Template`}
               </div>
@@ -574,11 +570,15 @@ export default function BoardPage({ isTemplate }: { isTemplate?: boolean }) {
                   workspaceSlug={workspace.slug ?? ""}
                   boardSlug={boardData?.slug ?? ""}
                   boardPublicId={boardId ?? ""}
-                  visibility={boardData?.visibility ?? "private"}
+                  visibility={
+                    (boardData?.visibility as "public" | "private" | undefined) ?? "private"
+                  }
                   canEdit={canEditBoard}
                 />
                 <VisibilityButton
-                  visibility={boardData?.visibility ?? "private"}
+                  visibility={
+                    (boardData?.visibility as "public" | "private" | undefined) ?? "private"
+                  }
                   boardPublicId={boardId ?? ""}
                   boardSlug={boardData?.slug ?? ""}
                   queryParams={queryParams}
@@ -607,7 +607,7 @@ export default function BoardPage({ isTemplate }: { isTemplate?: boolean }) {
             >
               <Button
                 iconLeft={
-                  <HiOutlinePlusSmall
+                  <Plus
                     className="-mr-0.5 h-5 w-5"
                     aria-hidden="true"
                   />
@@ -647,8 +647,8 @@ export default function BoardPage({ isTemplate }: { isTemplate?: boolean }) {
               {boardData.lists.length === 0 ? (
                 <div className="z-10 flex h-full w-full flex-col items-center justify-center space-y-8 pb-[150px]">
                   <div className="flex flex-col items-center">
-                    <HiOutlineSquare3Stack3D className="h-10 w-10 text-light-800 dark:text-dark-800" />
-                    <p className="mb-2 mt-4 text-[14px] font-bold text-light-1000 dark:text-dark-950">
+                    <Layers className="h-10 w-10 text-light-800 dark:text-dark-800" />
+                    <p className="mb-2 mt-4 text-[14px] font-medium text-light-1000 dark:text-dark-950">
                       {t`No lists`}
                     </p>
                     <p className="text-[14px] text-light-900 dark:text-dark-900">

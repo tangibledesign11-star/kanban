@@ -54,7 +54,7 @@ export default function OSSFriendsView() {
       <div className="flex h-full w-full flex-col lg:pt-[5rem]">
         <div className="w-full pb-10 pt-32">
           <div className="flex flex-col items-center justify-center px-4 pb-10">
-            <p className="mt-4 text-center text-3xl font-bold text-light-1000 dark:text-dark-1000 lg:text-3xl">
+            <p className="mt-4 text-center text-3xl font-medium text-light-1000 dark:text-dark-1000 lg:text-3xl">
               {t`Open Source Friends`}
             </p>
             <p className="text:md lg:text-md mt-4 max-w-[500px] text-center text-light-950 dark:text-dark-900">
@@ -92,7 +92,7 @@ export default function OSSFriendsView() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <h3 className="text-lg font-semibold text-light-1000 dark:text-dark-1000">
+                        <h3 className="text-lg font-medium text-light-1000 dark:text-dark-1000">
                           {friend.name}
                         </h3>
                       </Link>

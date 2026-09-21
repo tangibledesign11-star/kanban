@@ -1,14 +1,13 @@
 import { useRouter } from "next/router";
 import { t } from "@lingui/core/macro";
 import {
-  HiEllipsisHorizontal,
-  HiLink,
-  HiOutlineDocumentDuplicate,
-  HiOutlineTrash,
-  HiOutlineStar,
-  HiStar,
-} from "react-icons/hi2";
-import { IoArchiveOutline } from "react-icons/io5";
+  Archive,
+  Copy,
+  Link2,
+  MoreHorizontal,
+  Star,
+  Trash2,
+} from "lucide-react";
 import Dropdown from "~/components/Dropdown";
 import { usePermissions } from "~/hooks/usePermissions";
 import { useModal } from "~/providers/modal";
@@ -94,7 +93,7 @@ export default function BoardDropdown({
           label: t`Make template`,
           action: () => openModal("CREATE_TEMPLATE"),
           icon: (
-            <HiOutlineDocumentDuplicate className="h-[16px] w-[16px] text-dark-900" />
+            <Copy className="h-[16px] w-[16px] text-dark-900" />
           ),
         },
       ]
@@ -104,7 +103,7 @@ export default function BoardDropdown({
         {
           label: t`Edit board URL`,
           action: () => openModal("UPDATE_BOARD_SLUG"),
-          icon: <HiLink className="h-[16px] w-[16px] text-dark-900" />,
+          icon: <Link2 className="h-[16px] w-[16px] text-dark-900" />,
         },
       ]
       : []),
@@ -114,7 +113,7 @@ export default function BoardDropdown({
           label: isArchived ? t`Unarchive board` : t`Archive board`,
           action: handleArchiveOrUnarchive,
           icon: (
-            <IoArchiveOutline className="h-[16px] w-[16px] text-dark-900" />
+            <Archive className="h-[16px] w-[16px] text-dark-900" />
           ),
         },
       ]
@@ -125,9 +124,9 @@ export default function BoardDropdown({
         : t`Add to favorites`,
       action: handleToggleFavorite,
       icon: isFavorite ? (
-        <HiStar className="h-[16px] w-[16px] text-dark-900" />
+        <Star className="h-[16px] w-[16px] text-dark-900 fill-current" />
       ) : (
-        <HiOutlineStar className="h-[16px] w-[16px] text-dark-900" />
+        <Star className="h-[16px] w-[16px] text-dark-900" />
       ),
     },
     ...(canDeleteBoard
@@ -136,7 +135,7 @@ export default function BoardDropdown({
           label: isTemplate ? t`Delete template` : t`Delete board`,
           action: () => openModal("DELETE_BOARD"),
           icon: (
-            <HiOutlineTrash className="h-[16px] w-[16px] text-dark-900" />
+            <Trash2 className="h-[16px] w-[16px] text-dark-900" />
           ),
         },
       ]
@@ -152,7 +151,7 @@ export default function BoardDropdown({
       disabled={isLoading || isArchiveActionPending}
       items={items}
     >
-      <HiEllipsisHorizontal className="h-5 w-5 text-dark-900" />
+      <MoreHorizontal className="h-5 w-5 text-dark-900" />
     </Dropdown>
   );
 }

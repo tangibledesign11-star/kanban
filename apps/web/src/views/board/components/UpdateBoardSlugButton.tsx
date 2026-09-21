@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
-import { HiLink } from "react-icons/hi";
+import { Link2 } from "lucide-react";
 
 import { Tooltip } from "~/components/Tooltip";
 import { usePopup } from "~/providers/popup";
@@ -86,7 +86,7 @@ const UpdateBoardSlugButton = ({
           className="flex h-7 w-7 items-center justify-center rounded-full hover:bg-light-200 dark:hover:bg-dark-200"
           aria-label={t`Copy board link`}
         >
-          <HiLink className="h-[13px] w-[13px]" />
+          <Link2 className="h-[13px] w-[13px]" />
         </button>
       </button>
     </Tooltip>

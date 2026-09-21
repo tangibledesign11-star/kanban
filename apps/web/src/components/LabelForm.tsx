@@ -2,7 +2,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { Fragment, useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { HiChevronUpDown, HiXMark } from "react-icons/hi2";
+import { ChevronsUpDown, X } from "lucide-react";
 
 import { colours } from "@kan/shared/constants";
 
@@ -126,7 +126,7 @@ export function LabelForm({
               closeModal();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
 
@@ -160,7 +160,7 @@ export function LabelForm({
                         </span>
                       </span>
                       <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                        <HiChevronUpDown
+                        <ChevronsUpDown
                           className="h-5 w-5 text-gray-400"
                           aria-hidden="true"
                         />

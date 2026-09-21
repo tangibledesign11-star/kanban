@@ -6,11 +6,11 @@ import { Fragment, useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FaGithub, FaTrello } from "react-icons/fa";
 import {
-  HiChevronUpDown,
-  HiMiniArrowTopRightOnSquare,
-  HiOutlineQuestionMarkCircle,
-  HiXMark,
-} from "react-icons/hi2";
+  ChevronsUpDown,
+  ExternalLink,
+  HelpCircle,
+  X,
+} from "lucide-react";
 
 import Button from "~/components/Button";
 import Toggle from "~/components/Toggle";
@@ -110,7 +110,7 @@ const SelectSource = ({
                         </span>
                       </span>
                       <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                        <HiChevronUpDown
+                        <ChevronsUpDown
                           className="h-5 w-5 text-gray-400"
                           aria-hidden="true"
                         />
@@ -189,7 +189,7 @@ const SelectSource = ({
           <Button
             type="submit"
             iconRight={
-              !hasIntegrations ? <HiMiniArrowTopRightOnSquare /> : undefined
+              !hasIntegrations ? <ExternalLink className="h-4 w-4" /> : undefined
             }
           >
             {hasIntegrations ? t`Select source` : t`Connect`}
@@ -517,7 +517,7 @@ export function ImportBoardsForm() {
             target="_blank"
             className="ml-2 text-neutral-500 hover:text-neutral-700 dark:text-dark-900 dark:hover:text-dark-700"
           >
-            <HiOutlineQuestionMarkCircle className="h-4.5 w-4.5" />
+            <HelpCircle className="h-4.5 w-4.5" />
           </Link>
         </div>
 
@@ -526,7 +526,7 @@ export function ImportBoardsForm() {
           className="rounded p-1 hover:bg-light-200 dark:hover:bg-dark-300"
           onClick={() => closeModal()}
         >
-          <HiXMark size={18} className="text-dark-900" />
+          <X size={18} className="text-dark-900" />
         </button>
       </div>
 

@@ -1,10 +1,6 @@
 import { Transition } from "@headlessui/react";
 import { useEffect } from "react";
-import {
-  HiOutlineCheckCircle,
-  HiOutlineExclamationCircle,
-  HiXMark,
-} from "react-icons/hi2";
+import { AlertCircle, CheckCircle2, X } from "lucide-react";
 
 import { usePopup } from "~/providers/popup";
 
@@ -42,20 +38,20 @@ const Popup: React.FC = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
                   {popupIcon === "success" && (
-                    <HiOutlineCheckCircle
+                    <CheckCircle2
                       aria-hidden="true"
                       className="h-5 w-5 text-green-400"
                     />
                   )}
                   {popupIcon === "error" && (
-                    <HiOutlineExclamationCircle
+                    <AlertCircle
                       aria-hidden="true"
                       className="h-5 w-5 text-red-400"
                     />
                   )}
                 </div>
                 <div className="ml-3 w-0 flex-1 pt-0.5">
-                  <p className="text-[12px] font-bold text-neutral-900 dark:text-dark-950">
+                  <p className="text-[12px] font-medium text-neutral-900 dark:text-dark-950">
                     {popupHeader}
                   </p>
                   <p className="mt-1 text-[12px] text-neutral-500 dark:text-dark-900">
@@ -68,10 +64,10 @@ const Popup: React.FC = () => {
                     onClick={() => {
                       hidePopup();
                     }}
-                    className="inline-flex h-fit items-center rounded-md p-1 px-1 text-sm font-semibold text-dark-50 hover:bg-light-100 dark:hover:bg-dark-200"
+                    className="inline-flex h-fit items-center rounded-md p-1 px-1 text-sm font-medium text-dark-50 hover:bg-light-100 dark:hover:bg-dark-200"
                   >
                     <span className="sr-only">Close</span>
-                    <HiXMark
+                    <X
                       aria-hidden="true"
                       className="h-4 w-4 text-dark-900"
                     />

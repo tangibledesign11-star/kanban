@@ -74,7 +74,7 @@ export default function UnsubscribePage() {
         <PatternedBackground />
         <div className="z-10 w-full max-w-md space-y-6">
           <div>
-            <h1 className="mt-6 text-center text-3xl font-bold tracking-tight text-light-1000 dark:text-dark-1000">
+            <h1 className="mt-6 text-center text-3xl font-medium tracking-tight text-light-1000 dark:text-dark-1000">
               {t`Do you want to unsubscribe?`}
             </h1>
             <p className="mt-4 text-center text-sm text-light-900 dark:text-dark-800">

@@ -3,7 +3,7 @@ import { Radio, RadioGroup } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { HiUser } from "react-icons/hi2";
+import { User } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import { authClient } from "@kan/auth/client";
@@ -145,7 +145,7 @@ export default function SelectPlanView() {
           {/* Left panel */}
           <div className="flex flex-col p-6 md:w-[55%] md:p-8">
             <div className="flex-1">
-              <h2 className="text-xl font-bold text-light-1000 dark:text-dark-1000">
+              <h2 className="text-xl font-medium text-light-1000 dark:text-dark-1000">
                 {t`Choose a plan`}
               </h2>
               <p className="mt-1 text-sm text-light-800 dark:text-dark-800">
@@ -157,7 +157,7 @@ export default function SelectPlanView() {
                 <RadioGroup
                   value={billing}
                   onChange={handleSetBilling}
-                  className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-semibold ring-1 ring-inset ring-light-600 dark:ring-dark-600"
+                  className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-medium ring-1 ring-inset ring-light-600 dark:ring-dark-600"
                 >
                   {FREQUENCIES.map((f) => (
                     <Radio
@@ -194,7 +194,7 @@ export default function SelectPlanView() {
                       <div className="flex items-start justify-between">
                         <div className="flex-1 pr-8">
                           <div className="flex items-center gap-2">
-                            <span className="text-sm font-semibold text-light-1000 dark:text-dark-1000">
+                            <span className="text-sm font-medium text-light-1000 dark:text-dark-1000">
                               {plan.name}
                             </span>
                             <span className="rounded-full bg-neutral-700 px-2 py-px text-[11px] font-medium text-neutral-200">
@@ -261,7 +261,7 @@ export default function SelectPlanView() {
                     className="h-full w-full object-cover"
                   />
                 ) : (
-                  <HiUser className="h-7 w-7 text-light-700 dark:text-dark-700" />
+                  <User className="h-7 w-7 text-light-700 dark:text-dark-700" />
                 )}
               </div>
 
@@ -301,7 +301,7 @@ export default function SelectPlanView() {
                       }}
                       className="flex h-6 w-6 items-center justify-center rounded-full bg-light-400 dark:bg-dark-400"
                     >
-                      <HiUser className="h-3.5 w-3.5 text-light-800 dark:text-dark-800" />
+                      <User className="h-3.5 w-3.5 text-light-800 dark:text-dark-800" />
                     </motion.div>
                   </motion.div>
                 ))}

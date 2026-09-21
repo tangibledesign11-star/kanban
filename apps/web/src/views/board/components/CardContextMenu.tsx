@@ -1,14 +1,14 @@
 import { t } from "@lingui/core/macro";
 import { useEffect, useRef } from "react";
 import {
-  HiLink,
-  HiOutlineCalendar,
-  HiOutlineDocumentDuplicate,
-  HiOutlineTag,
-  HiOutlineTrash,
-  HiOutlineUserGroup,
-  HiOutlineArrowRightCircle,
-} from "react-icons/hi2";
+  ArrowRightCircle,
+  Calendar,
+  Copy,
+  Link2,
+  Tag,
+  Trash2,
+  Users,
+} from "lucide-react";
 
 export type CardContextMenuAction =
   | "members"
@@ -36,43 +36,43 @@ const MENU_ITEMS: {
   {
     action: "members",
     label: t`Manage members`,
-    icon: <HiOutlineUserGroup className="h-4 w-4 shrink-0" />,
+    icon: <Users className="h-4 w-4 shrink-0" />,
     requiresEdit: true,
   },
   {
     action: "move",
     label: t`Move to another list`,
-    icon: <HiOutlineArrowRightCircle className="h-4 w-4 shrink-0" />,
+    icon: <ArrowRightCircle className="h-4 w-4 shrink-0" />,
     requiresEdit: true,
   },
   {
     action: "labels",
     label: t`Add / edit label`,
-    icon: <HiOutlineTag className="h-4 w-4 shrink-0" />,
+    icon: <Tag className="h-4 w-4 shrink-0" />,
     requiresEdit: true,
   },
   {
     action: "dueDate",
     label: t`Set due date`,
-    icon: <HiOutlineCalendar className="h-4 w-4 shrink-0" />,
+    icon: <Calendar className="h-4 w-4 shrink-0" />,
     requiresEdit: true,
   },
   {
     action: "copyLink",
     label: t`Copy link to card`,
-    icon: <HiLink className="h-4 w-4 shrink-0" />,
+    icon: <Link2 className="h-4 w-4 shrink-0" />,
     requiresEdit: false,
   },
   {
     action: "duplicate",
     label: t`Duplicate card`,
-    icon: <HiOutlineDocumentDuplicate className="h-4 w-4 shrink-0" />,
+    icon: <Copy className="h-4 w-4 shrink-0" />,
     requiresEdit: true,
   },
   {
     action: "delete",
     label: t`Delete card`,
-    icon: <HiOutlineTrash className="h-4 w-4 shrink-0" />,
+    icon: <Trash2 className="h-4 w-4 shrink-0" />,
     requiresEdit: true,
   },
 ];

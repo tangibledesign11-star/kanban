@@ -35,11 +35,11 @@ export default function LoginPage() {
         <div className="justify-top flex h-full flex-col items-center px-4 sm:justify-center">
           <div className="z-10 flex w-full flex-col items-center">
             <Link href="/">
-              <h1 className="mb-6 text-lg font-bold tracking-tight text-light-1000 dark:text-dark-1000">
+              <h1 className="mb-6 text-lg font-medium tracking-tight text-light-1000 dark:text-dark-1000">
                 kan.bn
               </h1>
             </Link>
-            <p className="mb-10 text-3xl font-bold tracking-tight text-light-1000 dark:text-dark-1000">
+            <p className="mb-10 text-3xl font-medium tracking-tight text-light-1000 dark:text-dark-1000">
               {isMagicLinkSent ? t`Check your inbox` : t`Welcome back`}
             </p>
             {isMagicLinkSent ? (

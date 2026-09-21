@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from "react";
 import ContentEditable from "react-contenteditable";
-import { HiOutlineEye, HiOutlineEyeSlash } from "react-icons/hi2";
+import { Eye, EyeOff } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -81,9 +81,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               onClick={() => setShowPassword((v) => !v)}
             >
               {showPassword ? (
-                <HiOutlineEyeSlash className="h-4 w-4" />
+                <EyeOff className="h-4 w-4" />
               ) : (
-                <HiOutlineEye className="h-4 w-4" />
+                <Eye className="h-4 w-4" />
               )}
             </button>
           )}

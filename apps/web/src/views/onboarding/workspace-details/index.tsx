@@ -3,14 +3,14 @@ import { t } from "@lingui/core/macro";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
-  HiArrowLeft,
-  HiArrowPath,
-  HiArrowRight,
-  HiCheck,
-  HiEllipsisVertical,
-  HiInformationCircle,
-  HiLockClosed,
-} from "react-icons/hi2";
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  Info,
+  Lock,
+  MoreVertical,
+  RotateCw,
+} from "lucide-react";
 
 import { authClient } from "@kan/auth/client";
 
@@ -195,7 +195,7 @@ export default function WorkspaceNameView() {
           {/* Left panel */}
           <div className="flex flex-col p-6 md:w-[55%] md:p-8">
             <div className="flex-1">
-              <h2 className="text-xl font-bold text-light-1000 dark:text-dark-1000">
+              <h2 className="text-xl font-medium text-light-1000 dark:text-dark-1000">
                 {t`Set up your workspace`}
               </h2>
               <p className="mt-1 text-sm text-light-800 dark:text-dark-800">
@@ -243,13 +243,13 @@ export default function WorkspaceNameView() {
                             placement="top"
                             delay={0}
                           >
-                            <HiInformationCircle className="h-4 w-4 leading-[0] text-dark-700 dark:text-dark-700" />
+                            <Info className="h-4 w-4 leading-[0] text-dark-700 dark:text-dark-700" />
                           </Tooltip>
                         ) : isProToggle && slug.length >= 3 ? (
                           isTyping || slugAvailability.isPending ? (
                             <LoadingSpinner />
                           ) : isSlugAvailable ? (
-                            <HiCheck className="h-4 w-4 text-white" />
+                            <Check className="h-4 w-4 text-white" />
                           ) : null
                         ) : null
                       }
@@ -323,12 +323,12 @@ export default function WorkspaceNameView() {
             {/* Browser chrome */}
             <div className="flex items-center gap-2 border-b border-light-400 px-3 py-2.5 dark:border-dark-400">
               <div className="flex items-center gap-1.5 text-light-700 dark:text-dark-700">
-                <HiArrowLeft className="h-3.5 w-3.5" />
-                <HiArrowRight className="h-3.5 w-3.5" />
-                <HiArrowPath className="h-3.5 w-3.5" />
+                <ArrowLeft className="h-3.5 w-3.5" />
+                <ArrowRight className="h-3.5 w-3.5" />
+                <RotateCw className="h-3.5 w-3.5" />
               </div>
               <div className="flex flex-1 items-center gap-1.5 rounded-md bg-light-200 px-2.5 py-1 dark:bg-dark-300">
-                <HiLockClosed className="h-3 w-3 flex-shrink-0 text-light-700 dark:text-dark-700" />
+                <Lock className="h-3 w-3 flex-shrink-0 text-light-700 dark:text-dark-700" />
                 <span className="truncate text-xs text-light-900 dark:text-dark-900">
                   kan.bn/
                   <span className="text-light-1000 dark:text-dark-1000">
@@ -336,13 +336,13 @@ export default function WorkspaceNameView() {
                   </span>
                 </span>
               </div>
-              <HiEllipsisVertical className="h-4 w-4 flex-shrink-0 text-light-700 dark:text-dark-700" />
+              <MoreVertical className="h-4 w-4 flex-shrink-0 text-light-700 dark:text-dark-700" />
             </div>
 
             {/* Browser content */}
             <div className="flex flex-1 flex-col items-center overflow-hidden px-14 py-8">
               {/* Workspace name + description */}
-              <p className="text-center text-xs font-bold text-light-1000 dark:text-dark-1000">
+              <p className="text-center text-xs font-medium text-light-1000 dark:text-dark-1000">
                 {name || t`Your workspace`}
               </p>
               <p className="mt-0.5 line-clamp-2 break-all text-center text-[10px] text-light-800 dark:text-dark-800">
@@ -374,7 +374,7 @@ export default function WorkspaceNameView() {
               </div>
 
               {/* Footer */}
-              <p className="mt-2 text-[10px] font-semibold text-light-900 dark:text-dark-900">
+              <p className="mt-2 text-[10px] font-medium text-light-900 dark:text-dark-900">
                 kan.bn
               </p>
             </div>

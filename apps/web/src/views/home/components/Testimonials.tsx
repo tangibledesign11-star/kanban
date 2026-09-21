@@ -46,7 +46,7 @@ const TestimonialCard = ({
           </div>
         ) : (
           <div
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-light-50 dark:text-dark-1000"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-medium text-light-50 dark:text-dark-1000"
             style={
               testimonial.colour
                 ? { backgroundColor: testimonial.colour }
@@ -59,7 +59,7 @@ const TestimonialCard = ({
 
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <p className="font-semibold text-light-1000 dark:text-dark-1000">
+            <p className="font-medium text-light-1000 dark:text-dark-1000">
               {testimonial.name}
             </p>
           </div>
@@ -232,7 +232,7 @@ const Testimonials = () => {
           <p>{t`Testimonials`}</p>
         </div>
 
-        <p className="mt-2 text-center text-3xl font-bold text-light-1000 dark:text-dark-1000 lg:text-4xl">
+        <p className="mt-2 text-center text-3xl font-medium text-light-1000 dark:text-dark-1000 lg:text-4xl">
           {t`Loved by teams worldwide`}
         </p>
         <p className="text-md lg:text-md mt-3 max-w-[500px] text-center text-light-950 dark:text-dark-900">

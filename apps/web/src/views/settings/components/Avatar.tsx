@@ -249,7 +249,7 @@ export default function Avatar({
         <Modal modalSize="md" positionFromTop="sm" isVisible>
           <div className="p-4 sm:p-6">
             <div className="mb-4">
-              <h3 className="text-base font-semibold text-light-1000 dark:text-dark-1000">
+              <h3 className="text-base font-medium text-light-1000 dark:text-dark-1000">
                 {t`Crop your avatar`}
               </h3>
               <p className="mt-1 text-sm text-light-800 dark:text-dark-800">

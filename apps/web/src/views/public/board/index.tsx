@@ -4,7 +4,7 @@ import { t } from "@lingui/core/macro";
 import { keepPreviousData } from "@tanstack/react-query";
 import { env } from "next-runtime-env";
 import { useEffect, useState } from "react";
-import { HiLink, HiOutlineLockClosed } from "react-icons/hi2";
+import { Link2, Lock } from "lucide-react";
 
 import Button from "~/components/Button";
 import Modal from "~/components/modal";
@@ -95,7 +95,7 @@ export default function PublicBoardView() {
       className="rounded p-1.5 transition-all hover:bg-light-200 focus:outline-none dark:hover:bg-dark-100"
       aria-label="Copy board URL"
     >
-      <HiLink className="h-4 w-4 text-light-900 dark:text-dark-900" />
+      <Link2 className="h-4 w-4 text-light-900 dark:text-dark-900" />
     </button>
   );
 
@@ -140,15 +140,15 @@ export default function PublicBoardView() {
                 <div className="h-[2.3rem] w-[150px] animate-pulse rounded-[5px] bg-light-200 dark:bg-dark-100" />
               </div>
             ) : (
-              <h1 className="font-bold leading-[2.3rem] tracking-tight text-neutral-900 focus:ring-0 focus-visible:outline-none dark:text-dark-1000 sm:text-[1.2rem]">
+              <h1 className="font-medium leading-[2.3rem] tracking-tight text-neutral-900 focus:ring-0 focus-visible:outline-none dark:text-dark-1000 sm:text-[1.2rem]">
                 {data?.name}
               </h1>
             )}
             {data && (
               <div className="z-10 flex items-center space-x-2">
-                <div className="inline-flex cursor-default items-center justify-center whitespace-nowrap rounded-md border-[1px] border-light-300 bg-light-50 px-3 py-2 text-sm font-semibold text-light-950 shadow-sm dark:border-dark-300 dark:bg-dark-50 dark:text-dark-950">
+                <div className="inline-flex cursor-default items-center justify-center whitespace-nowrap rounded-md border-[1px] border-light-300 bg-light-50 px-3 py-2 text-sm font-medium text-light-950 shadow-sm dark:border-dark-300 dark:bg-dark-50 dark:text-dark-950">
                   <span className="mr-2">
-                    <HiOutlineLockClosed />
+                    <Lock className="h-4 w-4" />
                   </span>
                   {t`View only`}
                 </div>
@@ -176,8 +176,8 @@ export default function PublicBoardView() {
             ) : !data && !isLoading && router.isReady && !!boardSlug ? (
               <div className="z-10 flex h-full w-full flex-col items-center justify-center space-y-8 pb-[150px]">
                 <div className="flex flex-col items-center">
-                  <HiOutlineLockClosed className="h-10 w-10 text-light-800 dark:text-dark-800" />
-                  <p className="mb-2 mt-4 text-[14px] font-bold text-light-1000 dark:text-dark-950">
+                  <Lock className="h-10 w-10 text-light-800 dark:text-dark-800" />
+                  <p className="mb-2 mt-4 text-[14px] font-medium text-light-1000 dark:text-dark-950">
                     {t`Board not found`}
                   </p>
                   <p className="text-[14px] text-light-900 dark:text-dark-900">
@@ -247,7 +247,7 @@ export default function PublicBoardView() {
 
           {IS_CLOUD && (
             <Link
-              className="text-lg font-bold tracking-tight text-neutral-900 dark:text-dark-1000"
+              className="text-lg font-medium tracking-tight text-neutral-900 dark:text-dark-1000"
               href="/"
             >
               kan.bn
@@ -262,7 +262,7 @@ export default function PublicBoardView() {
               className="absolute right-[1rem] inline-flex items-center gap-[0.175rem] rounded-full border border-light-300 bg-light-50 px-3 py-1 text-[11px] font-medium text-light-950 shadow-sm transition-colors hover:bg-light-100 dark:border-dark-300 dark:bg-dark-50 dark:text-dark-900 dark:hover:bg-dark-100"
             >
               <span>{`Powered by`}</span>
-              <span className="font-semibold">kan.bn</span>
+              <span className="font-medium">kan.bn</span>
             </a>
           )}
         </div>

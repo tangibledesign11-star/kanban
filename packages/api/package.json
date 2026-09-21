@@ -39,6 +39,10 @@
     "./utils/workspace": {
       "types": "./src/utils/workspace.ts",
       "default": "./src/utils/workspace.ts"
+    },
+    "./utils/apiToken": {
+      "types": "./src/utils/apiToken.ts",
+      "default": "./src/utils/apiToken.ts"
     }
   },
   "license": "GPL-3.0",

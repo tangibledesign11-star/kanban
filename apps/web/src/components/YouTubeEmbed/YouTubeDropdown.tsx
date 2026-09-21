@@ -1,10 +1,5 @@
 import { t } from "@lingui/core/macro";
-import {
-  HiEllipsisHorizontal,
-  HiLink,
-  HiPencil,
-  HiTrash,
-} from "react-icons/hi2";
+import { Link2, MoreHorizontal, Pencil, Trash2 } from "lucide-react";
 
 import { useModal } from "~/providers/modal";
 import Dropdown from "../Dropdown";
@@ -41,21 +36,21 @@ const YouTubeDropdown = ({
         {
           label: t`Edit`,
           action: handleEdit,
-          icon: <HiPencil className="h-4 w-4 text-dark-900" />,
+          icon: <Pencil className="h-4 w-4 text-dark-900" />,
         },
         {
           label: t`Convert to link`,
           action: onConvertToLink,
-          icon: <HiLink className="h-4 w-4 text-dark-900" />,
+          icon: <Link2 className="h-4 w-4 text-dark-900" />,
         },
         {
           label: t`Delete`,
           action: onDelete,
-          icon: <HiTrash className="h-4 w-4 text-dark-900" />,
+          icon: <Trash2 className="h-4 w-4 text-dark-900" />,
         },
       ]}
     >
-      <HiEllipsisHorizontal className="h-5 w-5 text-dark-900" />
+      <MoreHorizontal className="h-5 w-5 text-dark-900" />
     </Dropdown>
   );
 };

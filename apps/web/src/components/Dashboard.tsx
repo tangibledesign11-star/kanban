@@ -4,11 +4,11 @@ import { env } from "next-runtime-env";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import {
-  TbLayoutSidebarLeftCollapse,
-  TbLayoutSidebarLeftExpand,
-  TbLayoutSidebarRightCollapse,
-  TbLayoutSidebarRightExpand,
-} from "react-icons/tb";
+  PanelLeftClose,
+  PanelLeftOpen,
+  PanelRightClose,
+  PanelRightOpen,
+} from "lucide-react";
 
 import { authClient } from "@kan/auth/client";
 
@@ -188,12 +188,12 @@ export default function Dashboard({
             className="rounded p-1.5 transition-all hover:bg-light-200 dark:hover:bg-dark-100"
           >
             {isSideNavOpen ? (
-              <TbLayoutSidebarLeftCollapse
+              <PanelLeftClose
                 size={20}
                 className="text-light-900 dark:text-dark-900"
               />
             ) : (
-              <TbLayoutSidebarLeftExpand
+              <PanelLeftOpen
                 size={20}
                 className="text-light-900 dark:text-dark-900"
               />
@@ -207,12 +207,12 @@ export default function Dashboard({
               className="rounded p-1.5 transition-all hover:bg-light-200 dark:hover:bg-dark-100"
             >
               {isRightPanelOpen ? (
-                <TbLayoutSidebarRightCollapse
+                <PanelRightClose
                   size={20}
                   className="text-light-900 dark:text-dark-900"
                 />
               ) : (
-                <TbLayoutSidebarRightExpand
+                <PanelRightOpen
                   size={20}
                   className="text-light-900 dark:text-dark-900"
                 />

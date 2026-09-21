@@ -1,6 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { HiEllipsisHorizontal, HiMiniPlus } from "react-icons/hi2";
+import { MoreHorizontal, Plus } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 interface Item {
@@ -97,7 +97,7 @@ export default function CheckboxDropdown({
                     handleEdit(item.key);
                   }}
                 >
-                  <HiEllipsisHorizontal size={20} className="text-dark-900" />
+                  <MoreHorizontal size={20} className="text-dark-900" />
                 </button>
               )}
             </div>
@@ -119,7 +119,7 @@ export default function CheckboxDropdown({
             handleCreate();
           }}
         >
-          <HiMiniPlus size={20} className="pr-1.5" />
+          <Plus size={16} className="mr-1.5" />
           {createNewItemLabel}
         </button>
       )}

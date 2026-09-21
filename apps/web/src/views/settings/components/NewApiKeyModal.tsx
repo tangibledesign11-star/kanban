@@ -3,12 +3,7 @@ import { t } from "@lingui/core/macro";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import {
-  HiInformationCircle,
-  HiMiniCheck,
-  HiOutlineDocumentDuplicate,
-  HiXMark,
-} from "react-icons/hi2";
+import { Check, Copy, Info, X } from "lucide-react";
 import { z } from "zod";
 
 import { authClient } from "@kan/auth/client";
@@ -88,7 +83,7 @@ export default function NewApiKeyModal() {
       <div>
         <div className="px-5 pt-5">
           <div className="flex w-full items-center justify-between pb-4 text-neutral-900 dark:text-dark-1000">
-            <h2 className="text-sm font-bold">{t`API key created`}</h2>
+            <h2 className="text-sm font-medium">{t`API key created`}</h2>
             <button
               type="button"
               className="rounded p-1 hover:bg-light-300 focus:outline-none dark:hover:bg-dark-300"
@@ -97,7 +92,7 @@ export default function NewApiKeyModal() {
                 closeModal();
               }}
             >
-              <HiXMark
+              <X
                 size={18}
                 className="text-light-900 dark:text-dark-900"
               />
@@ -117,14 +112,14 @@ export default function NewApiKeyModal() {
                 onClick={() => copy(createdApiKey.key)}
               >
                 {copied ? (
-                  <HiMiniCheck className="h-5 w-5 text-green-600" />
+                  <Check className="h-5 w-5 text-green-600" />
                 ) : (
-                  <HiOutlineDocumentDuplicate className="h-5 w-5" />
+                  <Copy className="h-5 w-5" />
                 )}
               </button>
             </div>
             <div className="mt-2 flex items-start gap-1">
-              <HiInformationCircle className="mt-0.5 h-4 w-4 text-dark-900" />
+              <Info className="mt-0.5 h-4 w-4 text-dark-900" />
               <p className="text-xs text-gray-500 dark:text-dark-900">
                 {t`This API key will only be shown once. Please save it in a secure location.`}
               </p>
@@ -144,7 +139,7 @@ export default function NewApiKeyModal() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="px-5 pt-5">
         <div className="flex w-full items-center justify-between pb-4 text-neutral-900 dark:text-dark-1000">
-          <h2 className="text-sm font-bold">{t`New API key`}</h2>
+          <h2 className="text-sm font-medium">{t`New API key`}</h2>
           <button
             type="button"
             className="rounded p-1 hover:bg-light-300 focus:outline-none dark:hover:bg-dark-300"
@@ -153,7 +148,7 @@ export default function NewApiKeyModal() {
               closeModal();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
         <Input

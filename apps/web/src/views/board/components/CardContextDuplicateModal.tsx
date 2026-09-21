@@ -7,7 +7,7 @@ import {
 } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { useState } from "react";
-import { HiChevronDown } from "react-icons/hi2";
+import { ChevronDown } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 import Button from "~/components/Button";
@@ -107,7 +107,7 @@ export function CardContextDuplicateModal({
 
   return (
     <form onSubmit={handleSubmit} className="p-4">
-      <h2 className="mb-4 text-lg font-semibold text-light-1000 dark:text-dark-1000">
+      <h2 className="mb-4 text-lg font-medium text-light-1000 dark:text-dark-1000">
         {t`Duplicate card`}
       </h2>
 
@@ -131,7 +131,7 @@ export function CardContextDuplicateModal({
                     : t`Select a list`}
                 </span>
                 <span className="pointer-events-none absolute right-2 top-1/2 flex -translate-y-1/2 items-center">
-                  <HiChevronDown
+                  <ChevronDown
                     className="h-4 w-4 text-light-600 dark:text-dark-600"
                     aria-hidden
                   />

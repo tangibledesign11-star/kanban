@@ -3,7 +3,7 @@ import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { HiCheck, HiXMark } from "react-icons/hi2";
+import { Check, X } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import { z } from "zod";
 
@@ -142,7 +142,7 @@ export function NewWorkspaceForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="px-5 pt-5">
         <div className="flex w-full items-center justify-between pb-4">
-          <h2 className="text-sm font-bold text-neutral-900 dark:text-dark-1000">
+          <h2 className="text-sm font-medium text-neutral-900 dark:text-dark-1000">
             {t`New workspace`}
           </h2>
           <button
@@ -156,7 +156,7 @@ export function NewWorkspaceForm() {
               closeModal();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
 
@@ -196,7 +196,7 @@ export function NewWorkspaceForm() {
             iconRight={
               slug && slug.length >= 3 && !errors.slug ? (
                 isWorkspaceSlugAvailable?.isAvailable ? (
-                  <HiCheck className="h-4 w-4 text-green-500" />
+                  <Check className="h-4 w-4 text-green-500" />
                 ) : checkWorkspaceSlugAvailability.isPending || isTyping ? (
                   <LoadingSpinner />
                 ) : null

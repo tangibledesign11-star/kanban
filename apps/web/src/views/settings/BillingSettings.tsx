@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import { t } from "@lingui/core/macro";
 import { env } from "next-runtime-env";
-import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
+import { ExternalLink } from "lucide-react";
 
 import Button from "~/components/Button";
 import FeedbackModal from "~/components/FeedbackModal";
@@ -62,7 +62,7 @@ export default function BillingSettings() {
       <PageHead title={t`Settings | Billing`} />
 
       <div className="border-t border-light-300 dark:border-dark-300">
-        <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
+        <h2 className="mb-4 mt-8 text-[14px] font-medium text-neutral-900 dark:text-dark-1000">
           {t`Plan`}
         </h2>
         <p className="mb-8 text-sm text-neutral-500 dark:text-dark-900">
@@ -84,7 +84,7 @@ export default function BillingSettings() {
       </div>
 
       <div className="mb-8 border-t border-light-300 dark:border-dark-300">
-        <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
+        <h2 className="mb-4 mt-8 text-[14px] font-medium text-neutral-900 dark:text-dark-1000">
           {t`Billing`}
         </h2>
         <p className="mb-8 text-sm text-neutral-500 dark:text-dark-900">
@@ -92,7 +92,7 @@ export default function BillingSettings() {
         </p>
         <Button
           variant="primary"
-          iconRight={<HiMiniArrowTopRightOnSquare />}
+          iconRight={<ExternalLink className="h-4 w-4" />}
           onClick={handleOpenBillingPortal}
         >
           {t`Billing portal`}

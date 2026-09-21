@@ -2,7 +2,7 @@ import { t } from "@lingui/core/macro";
 import { formatDistanceToNow } from "date-fns";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { HiEllipsisHorizontal, HiPencil, HiTrash } from "react-icons/hi2";
+import { MoreHorizontal, Pencil, Trash2 } from "lucide-react";
 
 import Avatar from "~/components/Avatar";
 import Button from "~/components/Button";
@@ -110,7 +110,7 @@ const Comment = ({
           {
             label: t`Edit comment`,
             action: () => setIsEditing(true),
-            icon: <HiPencil className="h-[16px] w-[16px] text-dark-900" />,
+            icon: <Pencil className="h-[16px] w-[16px] text-dark-900" />,
           },
         ]
       : []),
@@ -119,7 +119,7 @@ const Comment = ({
           {
             label: t`Delete comment`,
             action: () => openModal("DELETE_COMMENT", publicId),
-            icon: <HiTrash className="h-[16px] w-[16px] text-dark-900" />,
+            icon: <Trash2 className="h-[16px] w-[16px] text-dark-900" />,
           },
         ]
       : []),
@@ -159,7 +159,7 @@ const Comment = ({
         {dropdownItems.length > 0 && !isViewOnly && (
           <div className="absolute right-4 top-4">
             <Dropdown items={dropdownItems}>
-              <HiEllipsisHorizontal className="h-5 w-5 text-light-900 dark:text-dark-800" />
+              <MoreHorizontal className="h-5 w-5 text-light-900 dark:text-dark-800" />
             </Dropdown>
           </div>
         )}

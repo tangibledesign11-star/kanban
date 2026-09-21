@@ -80,7 +80,7 @@ export default function PublicBoardsView() {
         }
       `}</style>
       <div className="flex h-screen flex-col items-center justify-center bg-light-100 dark:bg-dark-50">
-        <h1 className="mb-2 text-2xl font-bold text-light-1000 dark:text-dark-1000">
+        <h1 className="mb-2 text-2xl font-medium text-light-1000 dark:text-dark-1000">
           {data?.name}
         </h1>
         <p className="mb-6 text-light-1000 dark:text-dark-900">
@@ -96,7 +96,7 @@ export default function PublicBoardsView() {
           )}
         </div>
         <Link
-          className="text-lg font-bold tracking-tight text-neutral-900 dark:text-dark-1000"
+          className="text-lg font-medium tracking-tight text-neutral-900 dark:text-dark-1000"
           href="/"
         >
           kan.bn

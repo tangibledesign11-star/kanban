@@ -1,5 +1,5 @@
 import { t } from "@lingui/core/macro";
-import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
+import { SlidersHorizontal } from "lucide-react";
 
 import { useFontSize, type FontSize } from "~/providers/font-size";
 
@@ -14,7 +14,7 @@ export function FontSizeSelector() {
 
   return (
     <div className="relative">
-      <HiOutlineAdjustmentsHorizontal className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+      <SlidersHorizontal className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
       <select
         id="font-size-select"
         value={fontSize}

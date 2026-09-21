@@ -112,7 +112,7 @@ export default function InvitePage() {
           <PatternedBackground />
           <div className="z-10 w-full max-w-md space-y-8">
             <div>
-              <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-light-1000 dark:text-dark-1000">
+              <h2 className="mt-6 text-center text-3xl font-medium tracking-tight text-light-1000 dark:text-dark-1000">
                 {t`Invalid invitation`}
               </h2>
               <p className="mt-4 text-center text-sm text-light-900 dark:text-dark-800">
@@ -136,7 +136,7 @@ export default function InvitePage() {
         <PatternedBackground />
         <div className="z-10 w-full max-w-[400px] space-y-8">
           <div>
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-light-1000 dark:text-dark-1000">
+            <h2 className="mt-6 text-center text-3xl font-medium tracking-tight text-light-1000 dark:text-dark-1000">
               {t`Join workspace`}
             </h2>
             {!error ? (

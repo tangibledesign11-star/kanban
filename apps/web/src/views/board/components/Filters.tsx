@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import { t } from "@lingui/core/macro";
 import {
-  HiMiniXMark,
-  HiOutlineClock,
-  HiOutlineSquare3Stack3D,
-  HiOutlineTag,
-  HiOutlineUserCircle,
-} from "react-icons/hi2";
-import { IoFilterOutline } from "react-icons/io5";
+  CircleUser,
+  Clock,
+  Filter,
+  Layers,
+  Tag,
+  X,
+} from "lucide-react";
 
 import Avatar from "~/components/Avatar";
 import Button from "~/components/Button";
@@ -145,7 +145,7 @@ const Filters = ({
           {
             key: "members",
             label: t`Members`,
-            icon: <HiOutlineUserCircle size={16} />,
+            icon: <CircleUser size={16} />,
             items: formattedMembers,
           },
         ]
@@ -153,7 +153,7 @@ const Filters = ({
     {
       key: "labels",
       label: t`Labels`,
-      icon: <HiOutlineTag size={16} />,
+      icon: <Tag size={16} />,
       items: formattedLabels,
     },
     ...(formattedLists.length
@@ -161,7 +161,7 @@ const Filters = ({
           {
             key: "lists",
             label: t`Lists`,
-            icon: <HiOutlineSquare3Stack3D size={16} />,
+            icon: <Layers size={16} />,
             items: formattedLists,
           },
         ]
@@ -169,7 +169,7 @@ const Filters = ({
     {
       key: "dueDate",
       label: t`Due date`,
-      icon: <HiOutlineClock size={16} />,
+      icon: <Clock size={16} />,
       items: dueDateItems,
     },
   ];
@@ -216,7 +216,7 @@ const Filters = ({
         <Button
           variant="secondary"
           disabled={isLoading}
-          iconLeft={<IoFilterOutline />}
+          iconLeft={<Filter className="h-4 w-4" />}
         >
           {t`Filter`}
         </Button>
@@ -225,11 +225,11 @@ const Filters = ({
             type="button"
             onClick={clearFilters}
             aria-label={t`Clear filters`}
-            className="group absolute -right-[8px] -top-[8px] flex h-5 w-5 items-center justify-center rounded-full border-2 border-light-100 bg-light-1000 text-[8px] font-[700] text-light-600 dark:border-dark-50 dark:bg-dark-1000 dark:text-dark-600"
+            className="group absolute -right-[8px] -top-[8px] flex h-5 w-5 items-center justify-center rounded-full border-2 border-light-100 bg-light-1000 text-[8px] font-medium text-light-600 dark:border-dark-50 dark:bg-dark-1000 dark:text-dark-600"
           >
             <span className="group-hover:hidden">{numOfFilters}</span>
             <span className="hidden text-light-50 group-hover:inline dark:text-dark-50">
-              <HiMiniXMark size={12} />
+              <X size={12} />
             </span>
           </button>
         )}

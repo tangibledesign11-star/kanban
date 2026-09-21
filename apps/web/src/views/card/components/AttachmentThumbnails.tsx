@@ -3,13 +3,13 @@ import { Dialog, Transition } from "@headlessui/react";
 import { t } from "@lingui/core/macro";
 import { Fragment, useEffect, useState } from "react";
 import {
-  HiArrowDownTray,
-  HiChevronLeft,
-  HiChevronRight,
-  HiDocumentText,
-  HiOutlineTrash,
-  HiXMark,
-} from "react-icons/hi2";
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  FileText,
+  Trash2,
+  X,
+} from "lucide-react";
 
 import { usePopup } from "~/providers/popup";
 import { api } from "~/utils/api";
@@ -256,7 +256,7 @@ export function AttachmentThumbnails({
                     aria-label="Delete image"
                     disabled={deleteAttachment.isPending}
                   >
-                    <HiOutlineTrash className="h-4 w-4" />
+                    <Trash2 className="h-4 w-4" />
                   </button>
                 )}
                 <button
@@ -272,7 +272,7 @@ export function AttachmentThumbnails({
                   className="rounded-full bg-light-50 p-1.5 text-light-1000 transition-colors hover:bg-light-100 focus:outline-none dark:bg-dark-50 dark:text-dark-1000 dark:hover:bg-dark-100"
                   aria-label="Download image"
                 >
-                  <HiArrowDownTray className="h-4 w-4" />
+                  <Download className="h-4 w-4" />
                 </button>
               </div>
             )}
@@ -287,7 +287,7 @@ export function AttachmentThumbnails({
                   className="rounded-full bg-light-50 p-1.5 text-light-1000 transition-colors hover:bg-light-100 focus:outline-none dark:bg-dark-50 dark:text-dark-1000 dark:hover:bg-dark-100"
                   aria-label="Previous image"
                 >
-                  <HiChevronLeft className="h-4 w-4" />
+                  <ChevronLeft className="h-4 w-4" />
                 </button>
               )}
 
@@ -300,7 +300,7 @@ export function AttachmentThumbnails({
                   className="rounded-full bg-light-50 p-1.5 text-light-1000 transition-colors hover:bg-light-100 focus:outline-none dark:bg-dark-50 dark:text-dark-1000 dark:hover:bg-dark-100"
                   aria-label="Next image"
                 >
-                  <HiChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-4 w-4" />
                 </button>
               )}
 
@@ -313,7 +313,7 @@ export function AttachmentThumbnails({
                   className="rounded-full bg-light-50 p-1.5 text-light-1000 transition-colors hover:bg-light-100 focus:outline-none dark:bg-dark-50 dark:text-dark-1000 dark:hover:bg-dark-100"
                   aria-label="Close"
                 >
-                  <HiXMark className="h-4 w-4" />
+                  <X className="h-4 w-4" />
                 </button>
               )}
             </div>
@@ -395,7 +395,7 @@ function AttachmentThumbnail({
         />
       ) : (
         <div className="flex h-full w-full items-center justify-center bg-light-100 dark:bg-dark-100">
-          <HiDocumentText className="h-6 w-6 text-light-700 dark:text-dark-700" />
+          <FileText className="h-6 w-6 text-light-700 dark:text-dark-700" />
         </div>
       )}
     </button>
@@ -422,7 +422,7 @@ function FileListItem({
   return (
     <div className="group flex w-full items-center gap-3 rounded-lg border border-light-300 bg-light-50 px-3 py-2 dark:border-dark-200 dark:bg-dark-100">
       <div className="flex-shrink-0">
-        <HiDocumentText className="h-5 w-5 text-light-700 dark:text-dark-700" />
+        <FileText className="h-5 w-5 text-light-700 dark:text-dark-700" />
       </div>
       <div className="min-w-0 flex-1 truncate text-sm text-light-1000 dark:text-dark-1000">
         {attachment.originalFilename ?? "File"}
@@ -442,7 +442,7 @@ function FileListItem({
             className="flex-shrink-0 rounded-full bg-light-100 p-1.5 text-light-1000 transition-colors hover:bg-light-200 focus:outline-none dark:bg-dark-100 dark:text-dark-950 dark:hover:bg-dark-300"
             aria-label={`Download ${attachment.originalFilename}`}
           >
-            <HiArrowDownTray className="h-4 w-4" />
+            <Download className="h-4 w-4" />
           </button>
           {onDelete && (
             <button
@@ -453,7 +453,7 @@ function FileListItem({
               className="flex-shrink-0 rounded-full bg-light-100 p-1.5 text-light-1000 transition-colors hover:bg-light-200 focus:outline-none dark:bg-dark-100 dark:text-dark-950 dark:hover:bg-dark-300"
               aria-label={`Delete ${attachment.originalFilename}`}
             >
-              <HiXMark className="h-4 w-4" />
+              <X className="h-4 w-4" />
             </button>
           )}
         </div>

@@ -1,9 +1,9 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { t } from "@lingui/core/macro";
-import { env } from "next-runtime-env";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { HiCheck, HiXMark } from "react-icons/hi2";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { t } from "@lingui/core/macro";
+import { Check, X } from "lucide-react";
+import { env } from "next-runtime-env";
 import { z } from "zod";
 
 import Button from "~/components/Button";
@@ -112,7 +112,7 @@ export function UpdateBoardSlugForm({
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="px-5 pt-5">
         <div className="flex w-full items-center justify-between pb-4">
-          <h2 className="text-sm font-bold text-neutral-900 dark:text-dark-1000">
+          <h2 className="text-sm font-medium text-neutral-900 dark:text-dark-1000">
             {t`Edit board URL`}
           </h2>
           <button
@@ -123,7 +123,7 @@ export function UpdateBoardSlugForm({
               closeModal();
             }}
           >
-            <HiXMark size={18} className="text-light-900 dark:text-dark-900" />
+            <X size={18} className="text-light-900 dark:text-dark-900" />
           </button>
         </div>
 
@@ -145,9 +145,9 @@ export function UpdateBoardSlugForm({
           }}
           iconRight={
             !!errors.slug?.message || isBoardSlugAvailable?.isReserved ? (
-              <HiXMark className="h-4 w-4 text-red-500" />
+              <X className="h-4 w-4 text-red-500" />
             ) : (
-              <HiCheck className="h-4 w-4 dark:text-dark-1000" />
+              <Check className="h-4 w-4 dark:text-dark-1000" />
             )
           }
         />

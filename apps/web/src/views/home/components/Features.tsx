@@ -54,7 +54,7 @@ const FeatureItem = ({
       </div>
 
       <div className="relative mt-2 w-full px-4 text-center">
-        <p className="text-sm font-bold text-light-1000 dark:text-dark-1000 sm:transition-opacity sm:duration-200 sm:group-hover:opacity-0">
+        <p className="text-sm font-medium text-light-1000 dark:text-dark-1000 sm:transition-opacity sm:duration-200 sm:group-hover:opacity-0">
           {feature.title}
         </p>
         <p className="max mt-2 text-sm text-light-950 dark:text-dark-900 sm:absolute sm:inset-0 sm:mt-0 sm:opacity-0 sm:transition-opacity sm:duration-200 sm:group-hover:opacity-100">
@@ -132,7 +132,7 @@ const Features = ({ theme }: { theme: "light" | "dark" }) => {
           <p>{t`Features`}</p>
         </div>
 
-        <p className="mt-2 text-center text-3xl font-bold text-light-1000 dark:text-dark-1000 lg:text-4xl">
+        <p className="mt-2 text-center text-3xl font-medium text-light-1000 dark:text-dark-1000 lg:text-4xl">
           {t`Kanban reimagined`}
         </p>
         <p className="text-md lg:text-md mt-3 max-w-[500px] text-center text-light-950 dark:text-dark-900">

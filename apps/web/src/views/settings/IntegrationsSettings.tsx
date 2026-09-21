@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { t } from "@lingui/core/macro";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
+import { ExternalLink } from "lucide-react";
 import { z } from "zod";
 
 import Button from "~/components/Button";
@@ -138,7 +138,7 @@ export default function IntegrationsSettings() {
       <PageHead title={t`Settings | Integrations`} />
 
       <div className="mb-8 border-t border-light-300 dark:border-dark-300">
-        <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
+        <h2 className="mb-4 mt-8 text-[14px] font-medium text-neutral-900 dark:text-dark-1000">
           {t`Trello`}
         </h2>
         {!integrations?.some(
@@ -150,7 +150,7 @@ export default function IntegrationsSettings() {
             </p>
             <Button
               variant="primary"
-              iconRight={<HiMiniArrowTopRightOnSquare />}
+              iconRight={<ExternalLink className="h-4 w-4" />}
               onClick={() =>
                 window.open(
                   trelloUrl.url,
@@ -182,7 +182,7 @@ export default function IntegrationsSettings() {
       </div>
 
       <div className="mb-8 border-t border-light-300 dark:border-dark-300">
-        <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
+        <h2 className="mb-4 mt-8 text-[14px] font-medium text-neutral-900 dark:text-dark-1000">
           {t`GitHub`}
         </h2>
         {!githubStatus?.connected ? (

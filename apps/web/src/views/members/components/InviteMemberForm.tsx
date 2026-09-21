@@ -4,11 +4,11 @@ import { env } from "next-runtime-env";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import {
-  HiInformationCircle,
-  HiMiniCheck,
-  HiOutlineDocumentDuplicate,
-  HiXMark,
-} from "react-icons/hi2";
+  Check,
+  Copy,
+  Info,
+  X,
+} from "lucide-react";
 import { z } from "zod";
 
 import type { InviteMemberInput } from "@kan/api/types";
@@ -240,7 +240,7 @@ export function InviteMemberForm({
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="px-5 pt-5">
         <div className="text-neutral-9000 flex w-full items-center justify-between pb-4 dark:text-dark-1000">
-          <h2 className="text-sm font-bold">{t`Add member`}</h2>
+          <h2 className="text-sm font-medium">{t`Add member`}</h2>
           <button
             type="button"
             className="hover:bg-li ght-300 rounded p-1 focus:outline-none dark:hover:bg-dark-300"
@@ -249,7 +249,7 @@ export function InviteMemberForm({
               closeModal();
             }}
           >
-            <HiXMark size={18} className="dark:text-dark-9000 text-light-900" />
+            <X size={18} className="dark:text-dark-9000 text-light-900" />
           </button>
         </div>
         {isEmailEnabled && (
@@ -282,14 +282,14 @@ export function InviteMemberForm({
                   onClick={copyToClipboard}
                 >
                   {copied ? (
-                    <HiMiniCheck className="h-5 w-5 text-green-600" />
+                    <Check className="h-5 w-5 text-green-600" />
                   ) : (
-                    <HiOutlineDocumentDuplicate className="h-5 w-5" />
+                    <Copy className="h-5 w-5" />
                   )}
                 </button>
               </div>
               <div className="mt-2 flex items-start gap-1">
-                <HiInformationCircle className="mt-0.5 h-4 w-4 text-dark-900" />
+                <Info className="mt-0.5 h-4 w-4 text-dark-900" />
                 <p className="text-xs text-gray-500 dark:text-dark-900">
                   {t`Anyone with this link can join your workspace`}
                 </p>
